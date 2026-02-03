@@ -41,11 +41,11 @@ export function Footer() {
             </h4>
             <ul className="space-y-4 text-cream/60">
               {[
-              'Personal Care',
-              'Companionship',
-              'Memory Care',
-              'Respite Care',
-              'Hospice Support'].
+              'Mobility Support',
+              'Soulful Journeys',
+              'Elder Social Circles',
+              'Home-Cooked Meals',
+              'Hospital Assistance'].
               map((item) =>
               <li key={item}>
                   <a
@@ -92,11 +92,11 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-coral font-bold">P.</span>
-                (555) 123-4567
+                +91 80726 50628
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-coral font-bold">E.</span>
-                hello@thagai.care
+                hello.thagai@gmail.com
               </li>
             </ul>
           </div>

@@ -8,6 +8,7 @@ import { AudienceSections } from './components/AudienceSections';
 import { HowWeCare } from './components/HowWeCare';
 import { CommunityCircles } from './components/CommunityCircles';
 import { Testimonials } from './components/Testimonials';
+import { FAQsSection } from './components/FAQsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 export function App() {
@@ -23,6 +24,7 @@ export function App() {
         <HowWeCare />
         <CommunityCircles />
         <Testimonials />
+        <FAQsSection />
         <ContactSection />
       </main>
       <Footer />

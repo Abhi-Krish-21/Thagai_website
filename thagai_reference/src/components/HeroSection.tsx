@@ -43,9 +43,9 @@ export function HeroSection() {
             </div>
 
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-brown leading-[1.1]">
-              We care for your <br />
+              Care Made{' '}
               <span className="relative inline-block">
-                <span className="relative z-10 text-burgundy">Loved Ones</span>
+                <span className="relative z-10 text-burgundy">Simple</span>
                 <svg
                   className="absolute w-full h-3 -bottom-1 left-0 text-gold/40 -z-10"
                   viewBox="0 0 100 10"
@@ -63,9 +63,9 @@ export function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-brown/80 leading-relaxed">
-              Experience the peace of mind that comes from treating your family
-              like ours. Personalized, heartfelt care that honors dignity and
-              independence.
+              At Thagai, we make quality care simple and affordable. From healthcare
+              and transport to meals and daily support, everything your family needs
+              is in one place—hassle-free.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

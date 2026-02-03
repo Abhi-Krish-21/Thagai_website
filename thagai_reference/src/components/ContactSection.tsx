@@ -67,7 +67,7 @@ export function ContactSection() {
                     Call Us Anytime
                   </div>
                   <div className="text-3xl font-serif font-bold">
-                    (555) 123-4567
+                    +91 80726 50628
                   </div>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export function ContactSection() {
                   <div className="text-sm text-cream/70 uppercase tracking-wider mb-1">
                     Email Us
                   </div>
-                  <div className="text-xl font-serif">hello@thagai.care</div>
+                  <div className="text-xl font-serif">hello.thagai@gmail.com</div>
                 </div>
               </div>
 
@@ -131,7 +131,7 @@ export function ContactSection() {
                     type="tel"
                     id="phone"
                     className="w-full px-4 py-3 rounded-xl bg-white border border-brown/10 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all"
-                    placeholder="(555) 123-4567" />
+                    placeholder="+91 XXXXX XXXXX" />
 
                 </div>
               </div>
