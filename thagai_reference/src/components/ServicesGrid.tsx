@@ -1,66 +1,88 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  Heart,
-  Home,
   Car,
-  Brain,
+  Compass,
+  Users,
+  UtensilsCrossed,
+  Home,
+  Pill,
   Stethoscope,
-  Coffee,
+  HelpCircle,
   ArrowRight } from
 'lucide-react';
 const services = [
 {
-  icon: Heart,
-  title: 'Personal Care',
+  icon: Car,
+  title: 'Mobility Support',
   description:
-  'Dignified assistance with daily routines, hygiene, and dressing.',
+  'Assistance with transportation and movement to help seniors maintain their independence and mobility.',
   color: 'bg-burgundy/5 text-burgundy',
   image:
   'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop'
 },
 {
-  icon: Coffee,
-  title: 'Companionship',
+  icon: Compass,
+  title: 'Soulful Journeys',
   description:
-  'Meaningful conversations, shared hobbies, and genuine friendship.',
+  'Meaningful travel experiences and spiritual journeys tailored to enrich the lives of our seniors.',
   color: 'bg-teal/5 text-teal',
   image:
   'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=400&auto=format&fit=crop'
 },
 {
-  icon: Stethoscope,
-  title: 'Medical Support',
-  description: 'Professional medication management and health monitoring.',
+  icon: Users,
+  title: 'Elder Social Circles',
+  description:
+  'Creating vibrant communities and social connections to combat loneliness and foster friendships.',
   color: 'bg-coral/5 text-coral',
   image:
   'https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop'
 },
 {
-  icon: Home,
-  title: 'Home Help',
-  description: 'Light housekeeping, meal preparation, and organization.',
+  icon: UtensilsCrossed,
+  title: 'Home-Cooked Meals',
+  description:
+  'Nutritious, delicious home-style meals prepared with love and delivered fresh to your door.',
   color: 'bg-gold/5 text-gold',
   image:
   'https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=400&auto=format&fit=crop'
 },
 {
-  icon: Brain,
-  title: 'Memory Care',
+  icon: Home,
+  title: 'Maid & Cooking Services',
   description:
-  'Specialized support for those living with Alzheimer’s and dementia.',
+  'Professional housekeeping and cooking services to maintain a clean, comfortable living environment.',
   color: 'bg-burgundy/5 text-burgundy',
   image:
   'https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?q=80&w=400&auto=format&fit=crop'
 },
 {
-  icon: Car,
-  title: 'Transportation',
+  icon: Pill,
+  title: 'Medicine & Grocery Delivery',
   description:
-  'Safe accompaniment to appointments, social events, and errands.',
+  'Convenient delivery of medications and groceries directly to your home, ensuring you never run out of essentials.',
   color: 'bg-teal/5 text-teal',
   image:
   'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=400&auto=format&fit=crop'
+},
+{
+  icon: Stethoscope,
+  title: 'Hospital Assistance',
+  description:
+  'Comprehensive support during hospital visits and medical appointments with caring companions.',
+  color: 'bg-coral/5 text-coral',
+  image:
+  'https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=400&auto=format&fit=crop'
+},
+{
+  icon: HelpCircle,
+  title: 'Anything You Ask For',
+  description:
+  'Flexible, personalized services to meet any specific needs or requests - we\'re here to help with whatever you need.',
+  color: 'bg-gold/5 text-gold',
+  image:
+  'https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=400&auto=format&fit=crop'
 }];
 
 export function ServicesGrid() {
@@ -82,11 +104,12 @@ export function ServicesGrid() {
               Our Expertise
             </span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-brown">
-              Holistic Care Services
+              Our Services
             </h2>
             <p className="text-lg text-brown/70 mt-4">
-              Comprehensive support for every aspect of your loved one's
-              well-being, from physical health to emotional joy.
+              At Thagai, we make care simple and personal. From everyday support to
+              specialized services, we offer flexible, compassionate solutions
+              tailored to your needs.
             </p>
           </div>
           <button className="hidden md:flex items-center gap-2 font-medium text-burgundy hover:text-burgundy-light transition-colors group">
@@ -98,7 +121,7 @@ export function ServicesGrid() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) =>
           <motion.div
             key={index}

@@ -3,27 +3,27 @@ import { motion } from 'framer-motion';
 const steps = [
 {
   number: '01',
-  title: 'Meet & Understand',
+  title: 'Give Us a Call',
   description:
-  'We start with a warm, in-home visit to get to know your loved one’s personality, needs, and preferences.'
+  'Elder care made simple. Call or fill the form—any service, anytime.'
 },
 {
   number: '02',
   title: 'Personalized Plan',
   description:
-  'We craft a unique care plan that addresses medical needs while prioritizing joy and independence.'
+  'We understand your needs and craft a custom care plan—putting the right help in the right place.'
 },
 {
   number: '03',
-  title: 'Perfect Match',
+  title: 'Service at Your Doorstep',
   description:
-  'We carefully select a caregiver whose skills and personality create a natural, friendly bond.'
+  'Sit back and relax while our trusted providers deliver care right to your home.'
 },
 {
   number: '04',
-  title: 'Ongoing Support',
+  title: 'We\'re Always Here',
   description:
-  'Care needs change. We stay involved, adjusting the plan and ensuring consistent quality over time.'
+  'Loved it? Need it again? Just reach out—we\'re here whenever you need us.'
 }];
 
 export function HowWeCare() {
@@ -35,11 +35,10 @@ export function HowWeCare() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-brown mb-4">
-            Our Journey Together
+            Care Made Simple
           </h2>
           <p className="text-lg text-brown/70 max-w-2xl mx-auto">
-            We believe care is a partnership. Here is how we welcome you into
-            our family.
+            We believe care should be easy and accessible. Here's how we make it happen.
           </p>
         </div>
 
