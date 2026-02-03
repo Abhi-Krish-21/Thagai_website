@@ -1,0 +1,49 @@
+---
+import Container from "@/components/Container";
+import { Button } from "@/components/ui/button";
+---
+
+<section class="min-h-[40rem] flex items-center justify-center">
+  <Container
+    className="w-fit relative flex flex-col laptop:flex-row justify-center items-center gap-8"
+  >
+    <img
+      src="/images/about-us/about-us-2.webp"
+      alt="Thagai Healthcare Services - Showcasing our comprehensive care solutions"
+      class="w-[20rem] tablet:w-[32rem] laptop:-translate-x-56 desktop:w-[41.875rem] desktop:-translate-x-67"
+      width={670}
+    />
+
+    <div
+      class="laptop:absolute w-full tablet:w-[35.625rem] flex flex-col items-center gap-[2.0625rem] laptop:translate-x-50 desktop:translate-y-14 desktop:translate-x-67"
+    >
+      <h2
+        class="uppercase font-bold text-[2rem] tablet:text-[2.5rem] text-primary laptop:translate-x-10 desktop:translate-x-0"
+      >
+        What is Thagai?
+      </h2>
+
+      <div
+        class="flex flex-col gap-[0.9375rem] bg-custom-purple p-[1.875rem] w-full"
+      >
+        <p
+          class="text-justify text-primary font-normal text-normal tablet:text-[1.25rem]"
+        >
+          At Thagai, we are more than just a care service provider—we are a
+          compassion-driven initiative committed to making quality care
+          accessible and affordable for all. Founded by a team of young minds,
+          Thagai was born from a deep understanding of the challenges working
+          individuals face in finding reliable and affordable care. Our mission
+          is to bridge this gap with safe, compassionate, and high-quality
+          services tailored to the diverse needs of our clients.
+        </p>
+        <a href="/services">
+          <Button
+            className="uppercase text-justify text-white w-full max-w-[16.4375rem] h-[3.6875rem] cursor-pointer"
+            >Explore Our Services</Button
+          >
+        </a>
+      </div>
+    </div>
+  </Container>
+</section>

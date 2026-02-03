@@ -1,0 +1,39 @@
+---
+import Container from "@/components/Container";
+import FAQsCollapsible from "@/components/home/FAQsCollapsible";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+interface Props {
+  faqs: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+const { faqs } = Astro.props;
+---
+
+<section>
+  <Container
+    className="flex justify-center"
+  >
+    <Card className="w-full max-w-[43.4375rem]">
+      <CardHeader>
+        <CardTitle className="font-bold text-5xl text-primary text-center"
+          >FAQs</CardTitle
+        >
+      </CardHeader>
+      <CardContent>
+        {
+          faqs.map(({ question, answer }) => (
+            <FAQsCollapsible
+              question={question}
+              answer={answer}
+              client:visible
+            />
+          ))
+        }
+      </CardContent>
+    </Card>
+  </Container>
+</section>

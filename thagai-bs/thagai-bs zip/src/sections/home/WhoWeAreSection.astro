@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import Container from "@/components/Container";
+import { Button } from "@/components/ui/button";
+---
+
+<section class="">
+  <Container
+    className="flex flex-col desktop:flex-row items-center justify-center gap-[2.5rem]"
+  >
+    <div class="flex flex-col gap-8 max-w-[45.125rem]">
+      <p
+        class="text-[1.125rem] text-primary tracking-[0.3rem] tablet:tracking-[1.2rem] hidden laptop:block"
+      >
+        Who We Are
+      </p>
+      <h1>Who We Are</h1>
+      <p class="text-normal text-primary text-justify">
+        At Thagai, we are more than just a care service provider—we are a
+        compassion-driven initiative committed to making quality care accessible
+        and affordable for all. Founded by a team of young minds, Thagai was
+        born from a deep understanding of the challenges working individuals
+        face in finding reliable and affordable care. Our mission is to bridge
+        this gap with safe, compassionate, and high-quality services tailored to
+        the diverse needs of our clients.
+      </p>
+      <a
+        href="/about-us"
+        class="w-fit h-12 tablet:w-[13.4375rem] tablet:h-[3.6875rem]"
+      >
+        <Button
+          type="submit"
+          className="size-full uppercase text-[1rem] justify-start p-8 cursor-pointer"
+        >
+          Know More
+        </Button>
+      </a>
+    </div>
+
+    <div class="max-w-[18rem] tablet:max-w-[32.375rem] flex-none">
+      <div class="flex h-[7rem] tablet:h-[12.779375rem]">
+        <img
+          src="/images/home/home-6.webp"
+          alt="Healthcare professional providing personalized care"
+          class=""
+        />
+        <img
+          src="/images/home/home-7.webp"
+          alt="Compassionate care services in action"
+          class=""
+        />
+      </div>
+      <div class="flex h-[5rem] tablet:h-[10.1175rem]">
+        <img
+          src="/images/home/home-8.webp"
+          alt="Quality healthcare delivery at Thagai"
+          class=""
+        />
+        <img
+          src="/images/home/home-9.webp"
+          alt="Professional medical support services"
+          class=""
+        />
+      </div>
+      <div class="flex h-[7rem] tablet:h-[12.6875rem]">
+        <img src="/images/home/home-10.webp" alt="Patient care and comfort at Thagai" class="" />
+        <img
+          src="/images/home/home-11.webp"
+          alt="Dedicated healthcare team in service"
+          class=""
+        />
+      </div>
+    </div>
+  </Container>
+</section>

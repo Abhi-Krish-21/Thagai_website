@@ -1,0 +1,154 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SubPagesHeroSection from "@/sections/services/SubPagesHeroSection.astro";
+import ApproachesSection from "@/sections/GridsSection.astro";
+import SubPagesCardsSection from "@/sections/services/SubPagesCardsSection.astro";
+import FAQsSection from "@/sections/FAQsSection.astro";
+import SubPagesImage33 from "@/assets/services/subpages/subpages-33.png";
+import SubPagesImage27 from "@/assets/services/subpages/subpages-27.png";
+import SubPagesImage28 from "@/assets/services/subpages/subpages-28.png";
+import SubPagesImage17 from "@/assets/services/subpages/subpages-17.png";
+import SubPagesImage29 from "@/assets/services/subpages/subpages-29.png";
+import SubPagesImage30 from "@/assets/services/subpages/subpages-30.png";
+import SubPagesImage31 from "@/assets/services/subpages/subpages-31.png";
+
+const page = {
+  title: "Hire A Nanny",
+  heroSection: {
+    description:
+      "At Thagai, our dedicated and nurturing nannies provide comprehensive support to help your family thrive. Whether it’s child development, household chores, emotional support, or flexible scheduling, our trained professionals ensure safety, trust, and convenience—all at affordable rates. Let us make family life smoother and stress-free for you!",
+    image: {
+      src: SubPagesImage33,
+      alt: "",
+    },
+    link: "#",
+  },
+  approaches: [
+    {
+      title: "Child Growth and Development",
+      description:
+        "Thagai offers engaging activities for cognitive and emotional development, personalized care for each child, and academic support, including homework assistance.",
+    },
+    {
+      title: "Household Chores",
+      description:
+        "Thagai provides light housekeeping, laundry, and cleaning services to keep your home organized, along with meal planning and preparation for nutritious family meals.",
+    },
+    {
+      title: "Moral Support and Companionship",
+      description:
+        "Thagai offers compassionate emotional support, mentorship for children and parents, and a warm, loving home atmosphere to foster well-being and connection.",
+    },
+    {
+      title: "Flexible Scheduling",
+      description:
+        "Thagai offers customizable service hours, including evenings, weekends, and overnight care, ensuring flexibility to meet your family's specific needs.",
+    },
+    {
+      title: "Safety and Trust",
+      description:
+        "Thagai ensures safety through rigorous background checks, continuous training for top-quality care, and open communication for regular updates and feedback.",
+    },
+    {
+      title: "Affordability and Convenience",
+      description:
+        "Thagai offers transparent pricing with no hidden costs, easy booking through our user-friendly platform, and affordable packages to suit various family budgets.",
+    },
+  ],
+  cards: [
+    {
+      title: "Child Growth and Development",
+      description:
+        "Nurturing activities for cognitive and emotional development, personalized attention, and academic support",
+      image: {
+        src: SubPagesImage27,
+        alt: "",
+      },
+    },
+    {
+      title: "Household Chores",
+      description:
+        "Light housekeeping, laundry, and meal planning for an organized and stress-free home.",
+      image: {
+        src: SubPagesImage28,
+        alt: "",
+      },
+    },
+    {
+      title: "Moral Support and Companionship",
+      description:
+        "Compassionate presence offering emotional support, mentorship and a loving atmosphere.",
+      image: {
+        src: SubPagesImage17,
+        alt: "",
+      },
+    },
+    {
+      title: "Flexible Scheduling",
+      description:
+        "Customizable service hours, including evenings, weekends, and overnight options for convenience.",
+      image: {
+        src: SubPagesImage29,
+        alt: "",
+      },
+    },
+    {
+      title: "Safety and Trust",
+      description:
+        "Rigorous background checks, continuous training and open communication for safety assurance.",
+      image: {
+        src: SubPagesImage30,
+        alt: "",
+      },
+    },
+    {
+      title: "Affordability and Convenience",
+      description:
+        "Transparent pricing, easy booking, and affordable packages.",
+      image: {
+        src: SubPagesImage31,
+        alt: "",
+      },
+    },
+  ],
+  faqs: [
+    {
+      question: "What services does a nanny provide?",
+      answer:
+        "Our nannies assist with light household chores such as cleaning, laundry, meal preparation, and general organization. They also offer companionship and emotional support, creating a warm and nurturing environment at home.",
+    },
+    {
+      question: "How do I hire a nanny through Thagai?",
+      answer:
+        "You can contact us via our website or customer service. We’ll match you with a nanny who fits your needs, and you can schedule a consultation to discuss the specifics of what you require.",
+    },
+    {
+      question: "Are the nannies trained?",
+      answer:
+        "Yes, all our nannies go through a comprehensive screening process, including background checks, and are trained to handle household tasks and provide supportive care.",
+    },
+    {
+      question: "Can I customize the nanny’s working hours?",
+      answer:
+        "Yes, we offer flexible hours based on your family’s needs. Whether you need assistance during the day, evenings, weekends, or overnight, we can accommodate your preferred schedule.",
+    },
+    {
+      question: "How do I ensure the nanny is the right fit for my family?",
+      answer:
+        "We offer a trial period to ensure the nanny fits your family’s needs. If you feel it’s not the right match, we’ll arrange for another nanny who may better meet your expectations.",
+    },
+    {
+      question: "How is the safety of my family ensured with a nanny?",
+      answer:
+        "We prioritize safety by conducting thorough background checks, continuous training, and providing ongoing communication. You can also provide feedback to ensure the nanny is meeting your family’s needs.",
+    },
+  ],
+};
+---
+
+<Layout title="Hire a Nanny - Services" activePage="services/hire-a-nanny">
+  <SubPagesHeroSection title={page.title} {...page.heroSection} />
+  <ApproachesSection title="Nanny For All Your Needs" boxes={page.approaches} />
+  <SubPagesCardsSection cards={page.cards} />
+  <FAQsSection faqs={page.faqs}  />
+</Layout>

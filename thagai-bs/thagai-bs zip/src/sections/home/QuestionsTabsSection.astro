@@ -1,0 +1,16 @@
+---
+import CustomHomeTabs from "@/components/home/CustomHomeTabs";
+---
+
+<section
+  class="min-h-[80rem] min-[375px]:min-h-[67rem] min-[425px]:min-h-[62rem] tablet:min-h-[50rem] laptop:min-h-[46rem] relative flex flex-col items-center py-0 mb-32 tablet:mb-25 laptop:mb-16"
+>
+  <div
+    style={{
+      backgroundImage: `url(/images/home/home-14.webp)`,
+    }}
+    class="absolute z-0 translate-y-[8.3rem] tablet:translate-y-[6.3rem] laptop:translate-y-[3.9rem] w-full h-full bg-center bg-cover"
+  >
+  </div>
+  <CustomHomeTabs client:visible />
+</section>
