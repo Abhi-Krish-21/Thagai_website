@@ -1,0 +1,59 @@
+---
+import "../styles/global.css";
+import Layout from "@/layouts/Layout.astro";
+import HomeHeroSection from "@/sections/home/HomeHeroSection.astro";
+import OurServicesSection from "@/sections/home/OurServicesSection.astro";
+import CareMadeSimpleSection from "@/sections/home/CareMadeSimpleSection.astro";
+import JoinCommunitySection from "@/sections/home/JoinCommunitySection.astro";
+import Container from "@/components/Container";
+import FAQsSection from "@/sections/FAQsSection.astro";
+import { PHONE_NUMBER } from "@/lib/data";
+
+const faqs = [
+  {
+    question: "What services does Thagai offer?",
+    answer:
+      "Thagai provides a wide range of services to make life easier, including healthcare support, transportation, nutritious meal delivery, daily assistance, emergency help, and more—all in one place.",
+  },
+  {
+    question: "Who can use Thagai’s services?",
+    answer:
+      "Our services are designed for anyone in need of reliable care and support, whether it’s seniors, individuals recovering from illness, or families looking for assistance in managing daily needs.",
+  },
+  {
+    question: "Can I customize a care package based on my needs?",
+    answer:
+      "Yes! We offer flexible service options so you can choose and combine services based on your specific needs, ensuring personalized and affordable care.",
+  },
+  {
+    question: "How do I request a service?",
+    answer:
+      "Requesting a service is simple! Just fill out our Request a Callback form, call our team, or book through our platform, and we’ll connect you with the right service provider.",
+  },
+  {
+    question: "How do you select and verify caregivers/service providers?",
+    answer:
+      "We carefully screen and verify all service providers through background checks, experience assessments, and customer feedback to ensure safe, high-quality care.",
+  },
+  {
+    question: "How can I contact Thagai for assistance?",
+    answer: `You can reach us anytime through our website or call us at ${PHONE_NUMBER}. Our team is always ready to help you find the right care solutions!`,
+  },
+];
+---
+
+<Layout title="Thagai" activePage="home">
+  <HomeHeroSection />
+  <OurServicesSection />
+  <CareMadeSimpleSection />
+  <JoinCommunitySection />
+  <!-- <WhoWeAreSection /> -->
+
+  <!-- <QuestionsTabsSection /> -->
+  <Container className="py-10">
+    <h1 class="text-center max-w-[87rem] capitalize">
+      Thagai gives the care you need to live the life you love
+    </h1>
+  </Container>
+  <FAQsSection faqs={faqs} />
+</Layout>

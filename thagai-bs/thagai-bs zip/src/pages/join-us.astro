@@ -1,0 +1,45 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import JoinUsHeroSection from "@/sections/join-us/JoinUsHeroSection.astro";
+import HowToJoinSection from "@/sections/join-us/HowToJoinSection.astro";
+import WhyThagaiSection from "@/sections/GridsSection.astro";
+
+const boxes = [
+  {
+    title: "Grow with a Purpose",
+    description:
+      "Be part of a team that is transforming the care industry, making quality support accessible and compassionate.",
+  },
+  {
+    title: "Rewarding Career",
+    description:
+      "Experience the joy of making a real difference in people’s lives while growing your skills in a meaningful profession.",
+  },
+  {
+    title: "Supportive Work Environment",
+    description:
+      "At Thagai, we foster a culture of respect, teamwork, and continuous learning, ensuring you feel valued and empowered.",
+  },
+  {
+    title: "Opportunities for Growth",
+    description:
+      "We invest in our team’s professional development, offering training and career advancement opportunities.",
+  },
+  {
+    title: "Integrity & Transparency",
+    description:
+      "Work with an organization that prioritizes honesty, trust, and ethical practices, ensuring a fulfilling career experience.",
+  },
+  {
+    title: "Community & Impact",
+    description:
+      "Join a mission-driven organization that actively contributes to building a healthier, more compassionate society.",
+  },
+];
+---
+
+<Layout title="Join Us" activePage="join-us">
+  <JoinUsHeroSection />
+  <HowToJoinSection />
+  <WhyThagaiSection title="Why Thagai?" boxes={boxes} />
+</Layout>

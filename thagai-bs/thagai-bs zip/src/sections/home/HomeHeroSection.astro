@@ -1,0 +1,59 @@
+---
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import HomeForm from "@/components/Form";
+import Container from "@/components/Container";
+
+---
+
+<!-- Reduced min height a bit and added responsive vertical padding for better visual balance at 100% zoom -->
+<section
+  style={{
+    // backgroundImage: `url(${optimizedHomeImage1.src})`,
+  }}
+  class="flex items-center mx-auto bg-cover bg-center bg-no-repeat z-10 py-8 laptop:py-4 min-h-[calc(100vh-72px)]"
+>
+  <Container
+    className="flex flex-col laptop:flex-row items-center justify-center laptop:justify-between gap-8 laptop:gap-10"
+  >
+    <div class="hidden laptop:block shrink-0 max-w-[32rem]">
+      <img src="/images/home/home-17.webp" alt="Image" class="w-full h-auto object-contain" />
+    </div>
+
+    <div class="flex flex-col gap-4 size-full max-w-[40rem]">
+      <h1 class="text-primary">Care Made Simple</h1>
+      <p
+        class="text-primary text-[1.05rem] leading-relaxed bg-white/80 p-4 rounded-2xl desktop:bg-transparent desktop:p-0"
+      >
+        At Thagai, we make quality care simple and affordable. From healthcare
+        and transport to meals and daily support, everything your family needs
+        is in one place—hassle-free.
+      </p>
+
+      <div class="laptop:hidden max-h-[260px] max-w-[260px] mx-auto">
+        <img src="/images/home/home-17.webp" alt="Image" class="w-full h-auto object-contain" />
+      </div>
+
+      <Card
+        className="max-w-[40rem] bg-white/85 backdrop-blur-sm shadow-sm border border-[#e5d8ef] rounded-3xl px-2 py-2"
+      >
+        <CardHeader className="pb-4 pt-2 px-4">
+          <CardTitle className="text-[1.35rem] font-bold tracking-tight text-primary">
+            Get A Call Back
+          </CardTitle>
+          <CardDescription className="text-[1rem] text-[#9675A9] leading-snug">
+            Please fill your information so we can get in touch with you.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="px-4 pb-4">
+          <HomeForm client:load />
+        </CardContent>
+      </Card>
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,199 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SubPagesHeroSection from "@/sections/services/SubPagesHeroSection.astro";
+import ApproachesSection from "@/sections/GridsSection.astro";
+import SubPagesCardsSection from "@/sections/services/SubPagesCardsSection.astro";
+import FAQsSection from "@/sections/FAQsSection.astro";
+import SubPagesImage1 from "@/assets/services/subpages/subpages-1.png";
+import SubPagesImage6 from "@/assets/services/subpages/subpages-6.png";
+import SubPagesImage7 from "@/assets/services/subpages/subpages-7.png";
+import SubPagesImage8 from "@/assets/services/subpages/subpages-8.png";
+import SubPagesImage9 from "@/assets/services/subpages/subpages-9.png";
+import SubPagesImage10 from "@/assets/services/subpages/subpages-10.png";
+import SubPagesImage11 from "@/assets/services/subpages/subpages-11.png";
+import SubPagesImage12 from "@/assets/services/subpages/subpages-12.png";
+import SubPagesImage13 from "@/assets/services/subpages/subpages-13.png";
+import SubPagesImage14 from "@/assets/services/subpages/subpages-14.png";
+
+const page = {
+  title: "Home Health Care",
+  heroSection: {
+    description:
+      "At Thagai, We Redefine Home Healthcare With A Person- Centered, Affordable Approach That Prioritizes Companionship And Daily Support. Unlike Traditional Models, We Focus On Emotional Well-Being, Meaningful Connections, And Personalized Assistance To Enhance Comfort, Independence, And Quality Of Life.",
+    image: {
+      src: SubPagesImage1,
+      alt: "",
+    },
+    link: "#",
+  },
+  approaches: [
+    {
+      title: "Affordable Care",
+      description:
+        "We make quality home healthcare affordable, offering a cost-effective alternative to traditional models without compromising on care.",
+    },
+    {
+      title: "Person-Centered Care",
+      description:
+        "Our services are tailored to fit the unique needs of each individual, ensuring care that truly fits.",
+    },
+    {
+      title: "Companionship First",
+      description:
+        "We understand the importance of emotional support. Our caregivers focus on building meaningful relationships, making sure your loved one feels connected and valued.",
+    },
+    {
+      title: "Support with Daily Routines",
+      description:
+        "From getting out of bed to medication reminders, we help with the little things that make life easier and more comfortable.",
+    },
+    {
+      title: "Safety & Well-Being",
+      description:
+        "Your loved one’s safety is our priority. We ensure a secure environment with trained caregivers ready to offer support in emergencies and daily tasks.",
+    },
+    {
+      title: "Flexible, Customizable Plans",
+      description:
+        "Whether part-time or full-time, we offer flexible care plans that can be personalized to fit your loved one’s needs and your family’s schedule.",
+    },
+  ],
+  cards: [
+    {
+      title: "Doctor Visits",
+      description:
+        "Facilitation of regular check-ups and consultations with healthcare professionals",
+      image: {
+        src: SubPagesImage6,
+        alt: "",
+      },
+    },
+    {
+      title: "Assistance with Daily Routines",
+      description:
+        "Facilitation of regular check-ups and consultations with healthcare professionals",
+      image: {
+        src: SubPagesImage7,
+        alt: "",
+      },
+    },
+    {
+      title: "Medication Management",
+      description: "Ensuring medications are taken as prescribed",
+      image: {
+        src: SubPagesImage8,
+        alt: "",
+      },
+    },
+    {
+      title: "Transportation Services",
+      description: "Assisting with travel to appointments or outings.",
+      image: {
+        src: SubPagesImage9,
+        alt: "",
+      },
+    },
+    {
+      title: "24/7 Emergency Support",
+      description: "Round-the-clock assistance when needed.",
+      image: {
+        src: SubPagesImage10,
+        alt: "",
+      },
+    },
+    {
+      title: "Cultural Outings",
+      description:
+        "Taking seniors to spiritual and culturally significant places with atmost care.",
+      image: {
+        src: SubPagesImage11,
+        alt: "",
+      },
+    },
+    {
+      title: "Personalized Excursions",
+      description:
+        "Fulfilling their desires by carefully planning and facilitating trips to their desired destinations.",
+      image: {
+        src: SubPagesImage12,
+        alt: "",
+      },
+    },
+    {
+      title: "Food on Demand",
+      description:
+        "Arranging nutrient-rich meals tailored to specific dietary needs, ensuring a healthy and delicious recovery.",
+      image: {
+        src: SubPagesImage13,
+        alt: "",
+      },
+    },
+    {
+      title: "Home-base Medical Services",
+      description:
+        "Facilitating blood sample collection and organizing scans and tests from the comfort of their home.",
+      image: {
+        src: SubPagesImage14,
+        alt: "",
+      },
+    },
+  ],
+  faqs: [
+    {
+      question: "What is home health care?",
+      answer:
+        "Home health care provides personalized medical and non-medical support in the comfort of your own home, such as assistance with daily tasks, companionship, and specialized care.",
+    },
+    {
+      question: "Who can benefit from home health care?",
+      answer:
+        "Home health care is ideal for elderly individuals, those recovering from surgery or illness, or anyone who needs help with daily activities and medical assistance at home.",
+    },
+    {
+      question: "How do I know if my loved one needs home health care?",
+      answer:
+        "If your loved one needs help with everyday tasks like bathing, dressing, mobility, or managing medications, home health care could be the right solution to maintain their independence and well-being.",
+    },
+    {
+      question: "Are the caregivers trained and qualified?",
+      answer:
+        "Yes, all our caregivers are trained, experienced, and carefully vetted to ensure they provide compassionate and professional care.",
+    },
+    {
+      question:
+        "What are the activities of the caregivers in home health care services?",
+      answer:
+        "Our caregivers engage your loved one in various activities to promote mental and emotional well-being. These activities include light exercises, games, conversation, and even mental wellness activities like puzzles or memory-enhancing exercises. They also ensure that your loved one stays connected and engaged.",
+    },
+    {
+      question: "Can I customize the care plan?",
+      answer:
+        "Absolutely! Each care plan is personalized to meet the unique needs of your loved one. You can choose the level of care, from companionship to full-time medical support.",
+    },
+    {
+      question:
+        "What are the other services I can opt for, other than home health care?",
+      answer:
+        "Apart from home health care, you can also opt for additional services like Food on Demand, Transportation, Emergency Support, and more at discounted prices when bundled with your home care package. We’re here to make your life easier and more convenient.",
+    },
+    {
+      question: "How do I ensure the safety of my loved one during home care?",
+      answer:
+        "We ensure safety through trained caregivers, secure environments, and regular monitoring of services. Our team is always available for support and to address any concerns.",
+    },
+  ],
+};
+---
+
+<Layout
+  title="Home Healthcare - Services"
+  activePage="services/home-healthcare"
+>
+  <SubPagesHeroSection title={page.title} {...page.heroSection} minH60 />
+  <ApproachesSection
+    title={`Our Approach To ${page.title}`}
+    boxes={page.approaches}
+  />
+  <SubPagesCardsSection cards={page.cards} />
+  <FAQsSection faqs={page.faqs} justifyCenter />
+</Layout>

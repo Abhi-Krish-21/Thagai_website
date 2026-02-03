@@ -1,0 +1,77 @@
+---
+import { cn } from "@/lib/utils";
+import Container from "@/components/Container";
+import { getImage, Image } from "astro:assets";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import SubPagesImage5 from "@/assets/services/subpages/subpages-5.png";
+
+interface Props {
+  cards: ({
+    title: string;
+    description: string;
+    image: {
+      src: ImageMetadata;
+      alt: string;
+    };
+  } | null)[];
+  bgImg?: boolean;
+  className?: string,
+}
+
+const { cards, bgImg = true, className } = Astro.props;
+
+const optimizedSubPagesImage5 = await getImage({
+  src: SubPagesImage5,
+  format: "webp",
+});
+---
+
+<section
+  style={{
+    backgroundImage: bgImg ? `url(${optimizedSubPagesImage5.src})` : 'none',
+  }}
+  class={cn(
+    "flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat",
+    cards.length <= 6 ? "min-h-[45rem]" : "min-h-[60rem]"
+    , className)}
+>
+  <Container
+    className="tablet:w-fit grid grid-cols-1 mobile:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 gap-[1.25rem]"
+  >
+    {
+      cards.map((card, index) => (
+        <Card
+          className={cn(
+            // "tablet:max-w-[25.875rem] border-0 tablet:flex-row justify-center gap-4 items-center px-4",
+             "tablet:max-w-[25.875rem] border-0 tablet:flex-col justify-center gap-4 items-center px-4",
+            index % 2 === 0
+              ? "bg-primary text-custom-yellow"
+              : "text-primary" + bgImg && bgImg === true ? "bg-custom-yellow" : "bg-white"
+          )}
+        >
+          {card ? (
+            <Image {...card.image} class="size-[8rem] rounded-full tablet:size-[9.375rem]" />
+            <div class="h-full flex flex-col tablet:max-w-[16.125rem] gap-2">
+              <CardHeader className="px-0">
+                <CardTitle className="text-lg tablet:text-[1.875rem] font-medium leading-[2.25rem] text-center">
+                  {card.title}
+                </CardTitle>
+              </CardHeader>
+              <!-- <CardContent className="px-0"> -->
+              <!--   <p class="font-normal text-base leading-[1.3rem] text-justify">{card.description}</p> -->
+              <!-- </CardContent> -->
+            </div>
+          ) : (
+            <div class="tablet:min-h-[12rem] flex justify-center items-center">
+              <img
+                src="/images/logo-lg.webp"
+                alt="Thagai Logo"
+                class="w-full max-w-[23.4375rem]"
+              />
+            </div>
+          )}
+        </Card>
+      ))
+    }
+  </Container>
+</section>

@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+import Container from "@/components/Container";
+import { PHONE_NUMBER, EMAIL_ADDRESS } from "@/lib/data";
+
+const footerContent = [
+  {
+    title: "Our Services",
+    href: "#our-services",
+    links: [],
+  },
+  {
+    title: "Get In Touch",
+    href: "/contact-us",
+    links: [
+      {
+        href: `tel:${PHONE_NUMBER}`,
+        text: PHONE_NUMBER,
+      },
+      {
+        href: `mailto:${EMAIL_ADDRESS}`,
+        text: EMAIL_ADDRESS,
+      },
+    ],
+  },
+  {
+    title: "Join Us",
+    href: "/join-us",
+    links: [
+      {
+        href: "/join-us/#how-to-join?",
+        text: "How To Join",
+      },
+    ],
+  },
+];
+---
+
+<footer
+  class="bg-custom-yellow min-h-0 tablet:min-h-[27.1875rem] px-4 pt-[2rem] tablet:pt-[4.375rem] laptop:px-[3rem] desktop:px-[5.9375rem]"
+>
+  <Container
+    className="w-full flex flex-col tablet:flex-row flex-wrap items-center tablet:items-start justify-center tablet:justify-between text-center tablet:text-left gap-6 tablet:gap-[2rem]"
+  >
+    <div class="flex flex-col gap-[1.25rem]">
+      <a href="/">
+        <img src={"/images/logo.webp"} alt="Thagai logo" class="w-[8.125rem]" />
+      </a>
+      <p class="text-primary">Connect with us</p>
+      <div
+        class="flex items-center justify-center tablet:justify-start gap-4 flex-wrap"
+      >
+        <a
+          href="https://x.com/Thagai_care?t=kJi4KYidkmLsExFt008PDQ&s=08"
+          target="_blank"
+          aria-label="Visit our X (Twitter) profile"
+          class="p-2 rounded-md hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+        >
+          <img
+            src={"/images/x.webp"}
+            alt="X (Twitter) icon"
+            class="w-[1.5rem] h-[1.12125rem]"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/thagai.care?utm_source=qr&igsh=MTN6Z3BsOGxxYndnYg=="
+          target="_blank"
+          aria-label="Visit our Instagram profile"
+          class="p-2 rounded-md hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+        >
+          <img src={"/images/instagram.webp"} alt="Instagram icon" class="w-[1.4rem]" />
+        </a>
+        <a
+          href="https://wa.me/message/5BQHK3KZ2SV2C1"
+          target="_blank"
+          aria-label="Chat with us on WhatsApp"
+          class="p-2 rounded-md hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+        >
+          <img src={"/images/whatsappLog.webp"} alt="WhatsApp icon" class="w-[1.4rem]" />
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 w-full max-w-full tablet:max-w-[50.5rem] gap-y-4 gap-x-4 tablet:gap-[2rem] desktop:gap-[4rem] text-center tablet:text-left"
+    >
+      {
+        footerContent.map(({ title, href, links }) => (
+          <div class="flex flex-col items-center tablet:items-start gap-[0.75rem] tablet:gap-[1.25rem] text-primary">
+            <a href={href}>
+              <p class="text-[1.125rem] tablet:text-[1.25rem] font-bold">
+                {title}
+              </p>
+            </a>
+
+            {links.map((link) => (
+              <a
+                href={link.href}
+                class="text-[1.0625rem] tablet:text-[1.125rem] break-all tablet:break-words leading-relaxed"
+              >
+                {link.text}
+              </a>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+
+  <div
+    class="w-full mx-auto max-w-[95%] desktop:max-w-[90rem] flex flex-col tablet:flex-row justify-center tablet:justify-between items-center gap-2 py-[1.625rem] px-4 tablet:px-8 border-t-[1px] border-[#C0C0C0] mt-2 text-center tablet:text-left"
+  >
+    <p class="text-sm text-primary">&#169; 2025 Thagai</p>
+    <p class="text-sm text-primary">
+      Made With Care <span class="text-red-500 text-base">&#10084;</span> by BlueSwype
+      Tech, India
+    </p>
+  </div>
+</footer>

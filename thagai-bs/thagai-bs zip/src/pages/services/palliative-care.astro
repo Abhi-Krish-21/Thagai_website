@@ -1,0 +1,187 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SubPagesHeroSection from "@/sections/services/SubPagesHeroSection.astro";
+import ApproachesSection from "@/sections/GridsSection.astro";
+import SubPagesCardsSection from "@/sections/services/SubPagesCardsSection.astro";
+import FAQsSection from "@/sections/FAQsSection.astro";
+import SubPagesImage3 from "@/assets/services/subpages/subpages-3.png";
+import SubPagesImage6 from "@/assets/services/subpages/subpages-6.png";
+import SubPagesImage7 from "@/assets/services/subpages/subpages-7.png";
+import SubPagesImage8 from "@/assets/services/subpages/subpages-8.png";
+import SubPagesImage9 from "@/assets/services/subpages/subpages-9.png";
+import SubPagesImage10 from "@/assets/services/subpages/subpages-10.png";
+import SubPagesImage11 from "@/assets/services/subpages/subpages-11.png";
+import SubPagesImage12 from "@/assets/services/subpages/subpages-12.png";
+import SubPagesImage13 from "@/assets/services/subpages/subpages-13.png";
+import SubPagesImage14 from "@/assets/services/subpages/subpages-14.png";
+
+const page = {
+  title: "Palliative Care",
+  heroSection: {
+    description:
+      "At Thagai, we provide skilled and compassionate palliative care, ensuring comfort, dignity, and quality of life for individuals in need of extensive medical support. Beyond medical assistance, we emphasize companionship and emotional well-being, creating a holistic and nurturing environment for both individuals and their families.",
+    image: {
+      src: SubPagesImage3,
+      alt: "",
+    },
+    link: "#",
+  },
+  approaches: [
+    {
+      title: "Beyond Traditional Palliative Care",
+      description:
+        "Our palliative care offers skilled nursing support for elders with extensive medical needs, ensuring comfort and a dignified quality of life.",
+    },
+    {
+      title: "Integral Companionship",
+      description:
+        "While medical support is vital, our palliative care emphasizes companionship and emotional well-being, creating a holistic and compassionate environment for individuals and families.",
+    },
+    {
+      title: "Personalized Care Plans",
+      description:
+        "Our palliative care is tailored to individual needs, working closely with families to create personalized plans that enhance comfort and quality of life.",
+    },
+    {
+      title: "Pain and Symptom Management",
+      description:
+        "Our skilled caregivers prioritize pain and symptom management through continuous monitoring and compassionate care, ensuring comfort and relief for patients.",
+    },
+    {
+      title: "Family Support and Counseling",
+      description:
+        "We support families through the palliative care journey with guidance, counseling, and emotional reassurance, helping them navigate this time with strength and understanding.",
+    },
+    {
+      title: "24/7 Assistance and Care",
+      description:
+        "Our dedicated team provides 24/7 palliative care, offering medical assistance, emotional support, and companionship to ensure continuous care and peace of mind.",
+    },
+  ],
+  cards: [
+    {
+      title: "Doctor Visits",
+      description:
+        "Facilitation of regular check-ups and consultations with healthcare professionals",
+      image: {
+        src: SubPagesImage6,
+        alt: "",
+      },
+    },
+    {
+      title: "Assistance with Daily Routines",
+      description:
+        "Facilitation of regular check-ups and consultations with healthcare professionals",
+      image: {
+        src: SubPagesImage7,
+        alt: "",
+      },
+    },
+    {
+      title: "Medication Management",
+      description: "Ensuring medications are taken as prescribed",
+      image: {
+        src: SubPagesImage8,
+        alt: "",
+      },
+    },
+    {
+      title: "Transportation Services",
+      description: "Assisting with travel to appointments or outings.",
+      image: {
+        src: SubPagesImage9,
+        alt: "",
+      },
+    },
+    {
+      title: "24/7 Emergency Support",
+      description: "Round-the-clock assistance when needed.",
+      image: {
+        src: SubPagesImage10,
+        alt: "",
+      },
+    },
+    {
+      title: "Cultural Outings",
+      description:
+        "Taking seniors to spiritual and culturally significant places with atmost care.",
+      image: {
+        src: SubPagesImage11,
+        alt: "",
+      },
+    },
+    {
+      title: "Personalized Excursions",
+      description:
+        "Fulfilling their desires by carefully planning and facilitating trips to their desired destinations.",
+      image: {
+        src: SubPagesImage12,
+        alt: "",
+      },
+    },
+    {
+      title: "Food on Demand",
+      description:
+        "Arranging nutrient-rich meals tailored to specific dietary needs, ensuring a healthy and delicious recovery.",
+      image: {
+        src: SubPagesImage13,
+        alt: "",
+      },
+    },
+    {
+      title: "Home-base Medical Services",
+      description:
+        "Facilitating blood sample collection and organizing scans and tests from the comfort of their home.",
+      image: {
+        src: SubPagesImage14,
+        alt: "",
+      },
+    },
+  ],
+  faqs: [
+    {
+      question: "What is palliative care?",
+      answer:
+        "Palliative care focuses on enhancing the quality of life for individuals with serious illness, providing medical, emotional, and spiritual support to ensure comfort and dignity.",
+    },
+    {
+      question: "How is palliative care different from traditional care?",
+      answer:
+        "Unlike traditional care, palliative care goes beyond just medical treatment. We combine skilled medical care with emotional and psychological support to improve the overall well-being of the patient and their family.",
+    },
+    {
+      question: "What services are included in palliative care?",
+      answer:
+        "Our palliative care services include skilled nursing, pain management, emotional and psychological support, spiritual care, and companionship, all aimed at improving the patient's quality of life.",
+    },
+    {
+      question: "Are the caregivers trained in palliative care?",
+      answer:
+        "Yes, our caregivers and nurses are specially trained in palliative care to ensure that both medical needs and emotional support are provided with compassion and skill.",
+    },
+    {
+      question: "How does palliative care benefit the patient and family?",
+      answer:
+        "Palliative care provides relief from physical pain and emotional stress, allowing the patient to experience comfort and dignity while also supporting the family through difficult times.",
+    },
+    {
+      question: "Can I customize palliative care to fit my loved one's needs?",
+      answer:
+        "Yes, we offer personalized palliative care plans that are tailored to the specific needs of the patient, ensuring they receive the most appropriate care for their comfort, health, and emotional well-being.",
+    },
+  ],
+};
+---
+
+<Layout
+  title="Palliative Care - Services"
+  activePage="services/palliative-care"
+>
+  <SubPagesHeroSection title={page.title} {...page.heroSection} />
+  <ApproachesSection
+    title={`Our Approach To ${page.title}`}
+    boxes={page.approaches}
+  />
+  <SubPagesCardsSection cards={page.cards} />
+  <FAQsSection faqs={page.faqs} />
+</Layout>

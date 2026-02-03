@@ -1,0 +1,26 @@
+---
+import Container from "@/components/Container";
+import { Image } from "astro:assets";
+import HomeForm from "@/components/Form";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+---
+
+<section class="bg-center bg-custom-yellow bg-cover bg-no-repeat flex justify-center items-center py-[4rem] laptop:py-[6rem]">
+  <Container className="max-w-[81rem]">
+    <h1 class="text-primary">Contact Us</h1>
+    <Card className="w-full max-w-[76.5rem] h-full min-h-[31.375rem] border-none flex flex-col laptop:flex-row p-0 overflow-clip rounded-[3.125rem] gap-0 mt-8 bg-white/80">
+      <div class="flex justify-center items-center laptop:max-w-[30.25rem] bg-primary p-8">
+        <img src="/images/logo-lg.webp" alt="Thagai Contact" class="w-[15rem] laptop:size-auto" />
+      </div>
+      <div class="flex flex-col items-center justify-between p-[2rem] laptop:p-[4rem] gap-[2rem] w-full">
+        <CardHeader className="p-0 w-full">
+          <CardTitle className="font-semibold text-center text-primary capitalize text-[1.5rem] tablet:text-[2.25rem]">Get A Call Back</CardTitle>
+          <CardDescription className="text-center text-[#9675A9] text-[1.125rem] mt-2">Please fill your information so we can get in touch with you.</CardDescription>
+        </CardHeader>
+        <CardContent className="w-full p-0">
+          <HomeForm client:load />
+        </CardContent>
+      </div>
+    </Card>
+  </Container>
+</section>

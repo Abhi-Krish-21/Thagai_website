@@ -1,0 +1,78 @@
+---
+import Container from "@/components/Container";
+import { Check } from "lucide-react";
+
+const completeCareServicesArray = [
+  {
+    title: "Complete Care, Tailored for You",
+    description:
+      "We offer a wide range of services designed to meet your unique needs, making care simple and accessible.",
+  },
+  {
+    title: "Built with a Personal Touch",
+    description:
+      "Thagai was created with a deep understanding of real-life challenges. Our goal is to make quality care affordable and easy for everyone.",
+  },
+  {
+    title: "Care with Compassion",
+    description:
+      "For us, care isn’t just a service—it’s a personal commitment to safety, trust, and empathy.",
+  },
+  {
+    title: "Affordable, Without Compromise",
+    description:
+      "We keep our services affordable while ensuring the highest quality care, so you never have to settle.",
+  },
+  {
+    title: "More Than Just a Business",
+    description:
+      "Thagai is about making a real difference in people’s lives. We’re here to build trust and connections, one service at a time.",
+  },
+];
+---
+
+<section class="flex flex-col items-center gap-[2.0625rem]">
+  <h1 id="why-thagai?">Why Thagai?</h1>
+  <div
+    class="w-full min-h-[50rem] py-[2rem] tablet:p-[4rem] laptop:py-[6.25rem] laptop:px-[8.75rem] bg-custom-purple"
+  >
+    <Container
+      className="flex flex-col-reverse items-center desktop:flex-row justify-center tablet:p-0 gap-[4.0625rem]"
+    >
+      <div
+        class="flex flex-col justify-between w-full max-w-[32rem] laptop:max-w-[50rem] desktop:max-w-[34.5625rem] min-h-[30rem] desktop:min-h-[36.9375rem]"
+      >
+        <div class="flex flex-col">
+          <p class="text-primary text-normal tablet:text-[1.25rem] font-bold">
+            Why Choose Us
+          </p>
+          <h2
+            class="text-[1.5rem] tablet:text-[2.25rem] text-primary font-semibold"
+          >
+            Complete Care Services
+          </h2>
+        </div>
+        <div class="flex flex-col gap-[1.25rem]">
+          {
+            completeCareServicesArray.map((point) => (
+              <div class="flex gap-[1.25rem]">
+                <div class="flex items-center justify-center rounded-full bg-primary size-[1.25rem]">
+                  <Check className="text-white" size={10} strokeWidth={2} />
+                </div>
+                <p class="text-normal tablet:text-[1.25rem] text-primary text-justify leading-6 font-normal w-[calc(100%-2rem)] tablet:max-w-[29rem] laptop:max-w-[44rem] desktop:max-w-[32rem]">
+                  <strong class="font-bold">{point.title}:</strong>
+                  {point.description}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <img
+        src="/images/about-us/about-us-3.webp"
+        alt="Complete Care Services - Illustrating our comprehensive healthcare solutions"
+        class="w-[18rem] tablet:w-[33.75rem]"
+      />
+    </Container>
+  </div>
+</section>

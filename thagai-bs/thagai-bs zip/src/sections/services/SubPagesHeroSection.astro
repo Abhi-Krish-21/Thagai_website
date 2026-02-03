@@ -1,0 +1,52 @@
+---
+import Container from "@/components/Container";
+import { Image } from "astro:assets";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+interface Props {
+  title: string;
+  description: string;
+  image: {
+    src: ImageMetadata;
+    alt: string;
+  };
+  link: string;
+  minH60?: boolean;
+}
+
+const { title, description, image, link, minH60 } = Astro.props;
+---
+
+<section class={cn(minH60 ? "tablet:min-h-[60rem]" : "tablet:min-h-[50rem]")}>
+  <Container
+    className="relative z-0 flex flex-col laptop:flex-row justify-center items-center mt-[4.5rem]"
+  >
+    <Image
+      src={image.src}
+      alt={image.alt}
+      class="laptop:absolute laptop:top-0 laptop:translate-x-[8rem] desktop:translate-x-0 desktop:right-[6.5625rem] w-[40rem] desktop:w-[54.375rem] -z-10"
+    />
+    <div
+      class="flex flex-col laptop:-translate-x-[12rem] desktop:-translate-x-[20rem] laptop:translate-y-[5rem] gap-4 laptop:gap-0 mt-4 laptop:mt-0"
+    >
+      <h1 class="laptop:max-w-[21rem]">{title}</h1>
+      <div
+        class="max-w-[37.375rem] tablet:h-[20.9375rem] bg-primary flex flex-col justify-between px-8 py-6 gap-4 tablet:gap-0"
+      >
+        <p
+          class="text-base tablet:text-[1.25rem] font-normal text-white tablet:leading-[2.125rem] text-justify capitalize"
+        >
+          {description}
+        </p>
+        <a href={link}>
+          <Button
+            className="w-[13.4375rem] h-[3.6875rem] bg-white uppercase text-base text-primary justify-start hover:bg-slate-100 cursor-pointer"
+          >
+            Enquire Now
+          </Button>
+        </a>
+      </div>
+    </div>
+  </Container>
+</section>

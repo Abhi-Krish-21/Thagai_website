@@ -1,0 +1,47 @@
+---
+import Container from "@/components/Container";
+import JoinUsImage1 from "@/assets/join-us/join-us-1.png";
+import { getImage, Image } from "astro:assets";
+import JoinUsForm from "@/components/join-us/JoinUsForm";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+const optimizedJoinUsImage1 = await getImage({
+  src: JoinUsImage1,
+  format: "webp",
+});
+---
+
+<section
+  class="bg-center bg-custom-yellow bg-cover bg-no-repeat min-h-[54.4375rem] flex justify-center items-center"
+>
+  <Container className="max-w-[81rem] mt-[5rem] laptop:mt-[3rem]">
+    <h1 class="text-primary">Join Us</h1>
+    <Card
+      className="w-full max-w-[76.5rem] h-full min-h-[31.375rem] border-none flex flex-col laptop:flex-row p-0 overflow-clip rounded-[3.125rem] gap-0 mt-4"
+    >
+      <div
+        class="flex justify-center items-center laptop:max-w-[30.25rem] bg-primary"
+      >
+        <img
+          src="/images/logo-lg.webp"
+          alt="Join Thagai Healthcare Services - Career Opportunities"
+          class="w-[15rem] laptop:size-auto my-8"
+        />
+      </div>
+      <div
+        class="flex flex-col items-center justify-between p-[2rem] laptop:p-[5rem] gap-[2.5rem]"
+      >
+        <CardHeader>
+          <CardTitle
+            className="font-semibold text-center text-primary capitalize text-[1.5rem] tablet:text-[2.25rem]"
+          >
+            Get Part In Our Team
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="w-full p-0">
+          <JoinUsForm client:load />
+        </CardContent>
+      </div>
+    </Card>
+  </Container>
+</section>

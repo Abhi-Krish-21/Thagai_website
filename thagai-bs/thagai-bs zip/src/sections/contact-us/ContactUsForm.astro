@@ -1,0 +1,41 @@
+---
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import HomeForm from "@/components/Form";
+import Container from "@/components/Container";
+---
+
+<section id="get-a-call-back" class="flex items-center min-h-[40rem]">
+  <Container className="flex justify-center items-center">
+    <div
+      class="w-full flex flex-col items-center laptop:flex-row gap-[1rem] size-full max-w-[68.5625rem] laptop:justify-between"
+    >
+      <Card
+        className="w-full laptop:w-[41.1875rem] min-h-[24.25rem] bg-white/80 flex-none shadow-none border-none rounded-[2.125rem]"
+      >
+        <CardHeader>
+          <CardTitle className="text-[1.5rem] text-primary font-bold">
+            Get A Call Back
+          </CardTitle>
+          <CardDescription className="text-[1.125rem] text-[#9675A9]">
+            Please fill your information so we can get in touch with you.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <HomeForm client:load />
+        </CardContent>
+      </Card>
+
+      <div
+        class="max-w-[25.1875rem] h-[20rem] tablet:h-[24.25rem] rounded-[2.125rem] flex justify-center items-center bg-primary"
+      >
+        <img src="/images/logo-lg.webp" alt="Thagai Logo" class="w-full" />
+      </div>
+    </div>
+  </Container>
+</section>
