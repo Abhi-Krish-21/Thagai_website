@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/Button';
+import { Logo } from './ui/Logo';
 import { motion, AnimatePresence } from 'framer-motion';
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,13 +38,8 @@ export function Navigation() {
       <div className="container mx-auto px-4 md:px-6">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <Heart size={20} fill="currentColor" />
-            </div>
-            <span className="font-serif text-2xl font-bold text-brown tracking-tight">
-              Thagai
-            </span>
+          <a href="#" className="flex items-center group hover:opacity-80 transition-opacity">
+            <Logo variant="dark" size="md" />
           </a>
 
           {/* Desktop Nav */}
