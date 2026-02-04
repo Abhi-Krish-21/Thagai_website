@@ -14,7 +14,7 @@ export function ContactSection() {
           viewBox="0 0 100 100"
           preserveAspectRatio="none">
 
-          <path d="M0 100 C 20 0 50 0 100 100 Z" fill="#FAF7F2" />
+          <path d="M0 100 C 20 0 50 0 100 100 Z" fill="#e6d9cd" />
         </svg>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-coral rounded-full blur-[100px] opacity-30"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal rounded-full blur-[100px] opacity-30"></div>

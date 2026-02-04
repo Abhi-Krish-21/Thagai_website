@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #FAF7F2;
+  background-color: #e6d9cd;
   color: #3D2E2A;
   overflow-x: hidden;
 }
@@ -21,17 +21,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: #e6d9cd;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4A853;
+  background: #47294C;
   border-radius: 6px;
-  border: 3px solid #FAF7F2;
+  border: 3px solid #e6d9cd;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6B2D3C;
+  background: #5c3a62;
 }
 
 /* Utility for text stroke/outline effect */
