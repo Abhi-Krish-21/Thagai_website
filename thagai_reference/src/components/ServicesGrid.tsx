@@ -28,7 +28,7 @@ const services = [
   'Meaningful travel experiences and spiritual journeys tailored to enrich the lives of our seniors.',
   color: 'bg-teal/5 text-teal',
   image:
-  'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=400&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop'
 },
 {
   icon: Users,
@@ -46,7 +46,7 @@ const services = [
   'Nutritious, delicious home-style meals prepared with love and delivered fresh to your door.',
   color: 'bg-gold/5 text-gold',
   image:
-  'https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=400&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop'
 },
 {
   icon: Home,
@@ -87,12 +87,12 @@ const services = [
 
 export function ServicesGrid() {
   return (
-    <section id="services" className="py-24 bg-cream relative overflow-hidden">
-      {/* Top gradient transition from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-burgundy/10 to-transparent pointer-events-none"></div>
+    <section id="services" className="pt-32 pb-24 bg-cream relative overflow-hidden">
+      {/* Top gradient transition from ContactSection (purple → cream) - extends above section */}
+      <div className="absolute -top-4 left-0 right-0 h-80 bg-gradient-to-b from-burgundy via-burgundy/60 via-burgundy/30 to-transparent pointer-events-none"></div>
 
       {/* Bottom gradient transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream-dark to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-cream-dark/80 via-cream-dark/40 to-transparent pointer-events-none"></div>
 
       {/* Background Pattern */}
       <div

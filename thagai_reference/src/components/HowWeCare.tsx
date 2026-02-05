@@ -29,11 +29,11 @@ const steps = [
 export function HowWeCare() {
   return (
     <section className="py-24 bg-gradient-to-b from-cream-dark via-cream to-cream-dark relative overflow-hidden">
-      {/* Top gradient transition */}
-      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-cream to-transparent pointer-events-none"></div>
+      {/* Top gradient transition from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-cream/70 via-cream/30 to-transparent pointer-events-none"></div>
 
-      {/* Bottom gradient transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream-dark to-transparent pointer-events-none"></div>
+      {/* Bottom gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-cream-dark/70 via-cream-dark/30 to-transparent pointer-events-none"></div>
 
       {/* Decorative background line */}
       <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-burgundy/10 -translate-y-1/2 z-0"></div>

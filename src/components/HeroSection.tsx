@@ -5,6 +5,9 @@ import { ArrowRight, Play, Star } from 'lucide-react';
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden bg-cream">
+      {/* Bottom gradient transition to next section (burgundy/purple) - ends at full burgundy to match ContactSection */}
+      <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-b from-transparent via-burgundy/40 to-burgundy pointer-events-none z-10"></div>
+
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-teal/10 rounded-full blur-3xl animate-blob"></div>
@@ -172,7 +175,7 @@ export function HeroSection() {
               className="absolute bottom-10 left-0 w-56 h-40 rounded-[2rem] overflow-hidden shadow-xl z-30 border-4 border-white">
 
               <img
-                src="https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=400&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop"
                 alt="Caregiver helping"
                 className="w-full h-full object-cover" />
 

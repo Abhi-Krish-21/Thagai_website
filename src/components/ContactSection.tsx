@@ -7,6 +7,8 @@ export function ContactSection() {
       id="contact"
       className="py-24 bg-burgundy text-white relative overflow-hidden">
 
+      {/* No gradient here - ContactSection is fully purple. Gradient is in ServicesGrid */}
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg
@@ -66,7 +68,7 @@ export function ContactSection() {
                   <div className="text-sm text-cream/70 uppercase tracking-wider mb-1">
                     Call Us Anytime
                   </div>
-                  <div className="text-3xl font-serif font-bold">
+                  <div className="text-2xl font-serif font-bold">
                     (555) 123-4567
                   </div>
                 </div>
@@ -80,7 +82,7 @@ export function ContactSection() {
                   <div className="text-sm text-cream/70 uppercase tracking-wider mb-1">
                     Email Us
                   </div>
-                  <div className="text-xl font-serif">hello@thagai.care</div>
+                  <div className="text-2xl font-serif font-bold">hello@thagai.care</div>
                 </div>
               </div>
 
