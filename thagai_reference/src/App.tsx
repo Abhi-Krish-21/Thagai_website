@@ -17,11 +17,11 @@ export function App() {
       <Navigation />
       <main>
         <HeroSection />
-        <ServicesGrid />
-        <AudienceSections />
         <ContactSection />
-        <PhotoGallery />
+        <ServicesGrid />
         <HowWeCare />
+        <AudienceSections />
+        <PhotoGallery />
         <CommunityCircles />
         <Testimonials />
         <FAQsSection />
