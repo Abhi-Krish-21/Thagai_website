@@ -28,9 +28,26 @@ const steps = [
 
 export function HowWeCare() {
   return (
-    <section className="py-24 bg-cream-dark relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-cream-dark via-cream to-cream-dark relative overflow-hidden">
+      {/* Top gradient transition */}
+      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-cream to-transparent pointer-events-none"></div>
+
+      {/* Bottom gradient transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream-dark to-transparent pointer-events-none"></div>
+
       {/* Decorative background line */}
-      <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-terracotta/20 -translate-y-1/2 z-0"></div>
+      <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-burgundy/10 -translate-y-1/2 z-0"></div>
+
+      {/* Floating background blurs */}
+      <div className="absolute top-20 left-[10%] w-48 h-48 bg-burgundy/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-[12%] w-56 h-56 bg-coral/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gold/3 rounded-full blur-3xl"></div>
+
+      {/* Small floating circles */}
+      <div className="absolute top-16 right-[20%] w-3 h-3 bg-burgundy/15 rounded-full animate-float"></div>
+      <div className="absolute bottom-24 left-[25%] w-2 h-2 bg-coral/20 rounded-full animate-float-delayed"></div>
+      <div className="absolute top-1/3 left-[8%] w-4 h-4 bg-teal/10 rounded-full animate-float"></div>
+      <div className="absolute bottom-1/3 right-[15%] w-2 h-2 bg-gold/20 rounded-full animate-float-delayed"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
