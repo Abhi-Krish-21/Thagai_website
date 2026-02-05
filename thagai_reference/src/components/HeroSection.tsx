@@ -136,7 +136,7 @@ export function HeroSection() {
               className="absolute bottom-10 left-0 w-56 h-40 rounded-[2rem] overflow-hidden shadow-xl z-30 border-4 border-white">
 
               <img
-                src="https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=400&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop"
                 alt="Caregiver helping"
                 className="w-full h-full object-cover" />
 

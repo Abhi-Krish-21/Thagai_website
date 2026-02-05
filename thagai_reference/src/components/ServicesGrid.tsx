@@ -28,7 +28,7 @@ const services = [
   'Meaningful travel experiences and spiritual journeys tailored to enrich the lives of our seniors.',
   color: 'bg-teal/5 text-teal',
   image:
-  'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=400&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop'
 },
 {
   icon: Users,
@@ -46,7 +46,7 @@ const services = [
   'Nutritious, delicious home-style meals prepared with love and delivered fresh to your door.',
   color: 'bg-gold/5 text-gold',
   image:
-  'https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=400&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop'
 },
 {
   icon: Home,

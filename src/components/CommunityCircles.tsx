@@ -19,7 +19,7 @@ const activities = [
 {
   name: 'Music Therapy',
   image:
-  'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=500&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=500&auto=format&fit=crop',
   color: 'bg-burgundy',
   rotate: '-rotate-1'
 },

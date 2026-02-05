@@ -26,7 +26,7 @@ const services = [
   'Meaningful conversations, shared hobbies, and genuine friendship.',
   color: 'bg-teal/5 text-teal',
   image:
-  'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=400&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop'
 },
 {
   icon: Stethoscope,
@@ -42,7 +42,7 @@ const services = [
   description: 'Light housekeeping, meal preparation, and organization.',
   color: 'bg-gold/5 text-gold',
   image:
-  'https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=400&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop'
 },
 {
   icon: Brain,
