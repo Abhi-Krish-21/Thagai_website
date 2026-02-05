@@ -7,6 +7,12 @@ export function ContactSection() {
       id="contact"
       className="py-24 bg-burgundy text-white relative overflow-hidden">
 
+      {/* Top gradient transition from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-cream/30 to-transparent pointer-events-none z-10"></div>
+
+      {/* Bottom gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream/30 to-transparent pointer-events-none z-10"></div>
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg
@@ -19,6 +25,12 @@ export function ContactSection() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-coral rounded-full blur-[100px] opacity-30"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal rounded-full blur-[100px] opacity-30"></div>
       </div>
+
+      {/* Floating decorative elements */}
+      <div className="absolute top-20 left-10 w-3 h-3 bg-coral/40 rounded-full animate-float"></div>
+      <div className="absolute top-40 right-20 w-2 h-2 bg-gold/40 rounded-full animate-float-delayed"></div>
+      <div className="absolute bottom-32 left-1/4 w-4 h-4 bg-teal/30 rounded-full animate-float"></div>
+      <div className="absolute bottom-20 right-1/3 w-2 h-2 bg-cream/20 rounded-full animate-float-delayed"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">

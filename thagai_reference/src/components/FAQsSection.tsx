@@ -81,8 +81,21 @@ export function FAQsSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 bg-cream">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-24 bg-gradient-to-b from-cream-dark via-cream to-cream relative overflow-hidden">
+      {/* Top gradient transition */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-cream-dark to-transparent pointer-events-none z-10"></div>
+
+      {/* Floating background elements */}
+      <div className="absolute top-20 right-[10%] w-48 h-48 bg-burgundy/4 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-32 left-[8%] w-56 h-56 bg-coral/3 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-[5%] w-40 h-40 bg-teal/3 rounded-full blur-3xl"></div>
+
+      {/* Small floating dots */}
+      <div className="absolute top-32 left-[15%] w-2 h-2 bg-burgundy/15 rounded-full animate-float"></div>
+      <div className="absolute bottom-40 right-[20%] w-3 h-3 bg-coral/15 rounded-full animate-float-delayed"></div>
+      <div className="absolute top-1/3 right-[8%] w-2 h-2 bg-teal/15 rounded-full animate-float"></div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-brown mb-4">
             FAQs

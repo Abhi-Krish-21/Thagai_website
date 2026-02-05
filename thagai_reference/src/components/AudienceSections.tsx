@@ -4,8 +4,25 @@ import { Check, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 export function AudienceSections() {
   return (
-    <section id="families" className="py-24 bg-cream-dark overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="families" className="py-24 bg-gradient-to-b from-cream-dark via-cream-accent to-cream-dark overflow-hidden relative">
+      {/* Top gradient transition */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-cream-dark to-transparent pointer-events-none z-10"></div>
+
+      {/* Bottom gradient transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream-dark to-transparent pointer-events-none z-10"></div>
+
+      {/* Floating background elements */}
+      <div className="absolute top-40 right-[5%] w-64 h-64 bg-teal/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-[3%] w-48 h-48 bg-burgundy/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-40 right-[20%] w-56 h-56 bg-coral/5 rounded-full blur-3xl"></div>
+
+      {/* Small floating dots */}
+      <div className="absolute top-20 left-[15%] w-3 h-3 bg-teal/20 rounded-full animate-float"></div>
+      <div className="absolute top-1/3 right-[10%] w-2 h-2 bg-burgundy/15 rounded-full animate-float-delayed"></div>
+      <div className="absolute bottom-1/4 left-[8%] w-4 h-4 bg-coral/10 rounded-full animate-float"></div>
+      <div className="absolute bottom-32 right-[30%] w-2 h-2 bg-gold/20 rounded-full animate-float-delayed"></div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* For Seniors */}
         <div className="flex flex-col lg:flex-row items-center gap-16 mb-32 relative">
           {/* Decorative Background Blob */}

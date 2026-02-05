@@ -88,6 +88,12 @@ const services = [
 export function ServicesGrid() {
   return (
     <section id="services" className="py-24 bg-cream relative overflow-hidden">
+      {/* Top gradient transition from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-burgundy/10 to-transparent pointer-events-none"></div>
+
+      {/* Bottom gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream-dark to-transparent pointer-events-none"></div>
+
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -96,6 +102,16 @@ export function ServicesGrid() {
           backgroundSize: '30px 30px'
         }}>
       </div>
+
+      {/* Floating decorative elements */}
+      <div className="absolute top-32 left-[5%] w-40 h-40 bg-burgundy/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 right-[8%] w-52 h-52 bg-coral/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-[15%] w-36 h-36 bg-teal/5 rounded-full blur-3xl"></div>
+
+      {/* Small floating dots */}
+      <div className="absolute top-40 right-20 w-2 h-2 bg-burgundy/20 rounded-full animate-float"></div>
+      <div className="absolute top-60 left-32 w-3 h-3 bg-coral/20 rounded-full animate-float-delayed"></div>
+      <div className="absolute bottom-40 right-1/4 w-2 h-2 bg-teal/20 rounded-full animate-float"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
