@@ -92,7 +92,7 @@ export function ServicesGrid() {
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'radial-gradient(#6B2D3C 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#47294C 1px, transparent 1px)',
           backgroundSize: '30px 30px'
         }}>
       </div>
@@ -159,12 +159,9 @@ export function ServicesGrid() {
                 <h3 className="font-serif text-2xl font-bold text-brown mb-3 group-hover:text-burgundy transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-brown/70 leading-relaxed mb-6 flex-1">
+                <p className="text-brown/70 leading-relaxed flex-1">
                   {service.description}
                 </p>
-                <div className="flex items-center text-sm font-bold text-brown/40 group-hover:text-burgundy transition-colors uppercase tracking-wide">
-                  Learn More
-                </div>
               </div>
             </motion.div>
           )}

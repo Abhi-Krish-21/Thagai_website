@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from './ui/Button';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden bg-cream">
@@ -13,7 +13,7 @@ export function HeroSection() {
 
         {/* Large Watermark Text */}
         <div className="absolute top-20 right-0 font-serif text-[200px] leading-none text-brown/5 opacity-20 select-none whitespace-nowrap hidden lg:block">
-          Thagai Care
+          thagai
         </div>
       </div>
 
@@ -73,44 +73,6 @@ export function HeroSection() {
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <div className="flex items-center gap-4 sm:ml-4 cursor-pointer group">
-                <div className="w-12 h-12 rounded-full bg-white border border-brown/10 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform text-burgundy">
-                  <Play size={20} fill="currentColor" className="ml-1" />
-                </div>
-                <span className="font-medium text-brown underline decoration-brown/30 underline-offset-4 group-hover:text-burgundy transition-colors">
-                  Watch our story
-                </span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-6 pt-8 border-t border-brown/10">
-              <div className="flex -space-x-4">
-                {[1, 2, 3, 4].map((i) =>
-                <div
-                  key={i}
-                  className="w-12 h-12 rounded-full border-2 border-cream overflow-hidden">
-
-                    <img
-                    src={`https://images.unsplash.com/photo-${1500000000000 + i}?w=100&h=100&fit=crop`}
-                    alt="User"
-                    className="w-full h-full object-cover" />
-
-                  </div>
-                )}
-                <div className="w-12 h-12 rounded-full bg-burgundy text-white flex items-center justify-center font-bold text-sm border-2 border-cream">
-                  2k+
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center gap-1 text-gold">
-                  {[1, 2, 3, 4, 5].map((i) =>
-                  <Star key={i} size={16} fill="currentColor" />
-                  )}
-                </div>
-                <p className="text-sm font-medium text-brown/70 mt-1">
-                  Trusted by 2,000+ families
-                </p>
-              </div>
             </div>
           </motion.div>
 

@@ -9,9 +9,9 @@ export default {
     extend: {
       colors: {
         burgundy: {
-          DEFAULT: '#6B2D3C',
-          light: '#8A3A4D',
-          dark: '#4A1F2A',
+          DEFAULT: '#47294C',
+          light: '#5c3a62',
+          dark: '#351e38',
         },
         coral: {
           DEFAULT: '#E07B54',
@@ -29,9 +29,9 @@ export default {
           dark: '#A88235',
         },
         cream: {
-          DEFAULT: '#FAF7F2',
-          dark: '#F0EBE0',
-          accent: '#F5F0E6',
+          DEFAULT: '#e6d9cd',
+          dark: '#d8cab9',
+          accent: '#ebe0d5',
         },
         brown: {
           DEFAULT: '#3D2E2A',

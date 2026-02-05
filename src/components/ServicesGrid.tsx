@@ -70,7 +70,7 @@ export function ServicesGrid() {
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'radial-gradient(#6B2D3C 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#47294C 1px, transparent 1px)',
           backgroundSize: '30px 30px'
         }}>
       </div>
