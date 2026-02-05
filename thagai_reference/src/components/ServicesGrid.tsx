@@ -159,12 +159,9 @@ export function ServicesGrid() {
                 <h3 className="font-serif text-2xl font-bold text-brown mb-3 group-hover:text-burgundy transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-brown/70 leading-relaxed mb-6 flex-1">
+                <p className="text-brown/70 leading-relaxed flex-1">
                   {service.description}
                 </p>
-                <div className="flex items-center text-sm font-bold text-brown/40 group-hover:text-burgundy transition-colors uppercase tracking-wide">
-                  Learn More
-                </div>
               </div>
             </motion.div>
           )}

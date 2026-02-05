@@ -72,13 +72,14 @@ export function ContactSection() {
                     htmlFor="name"
                     className="text-sm font-bold text-brown/70 uppercase tracking-wide">
 
-                    Your Name
+                    Name <span className="text-coral">*</span>
                   </label>
                   <input
                     type="text"
                     id="name"
+                    required
                     className="w-full px-4 py-3 rounded-xl bg-white border border-brown/10 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all"
-                    placeholder="John Doe" />
+                    placeholder="Your Name" />
 
                 </div>
                 <div className="space-y-2">
@@ -86,13 +87,14 @@ export function ContactSection() {
                     htmlFor="phone"
                     className="text-sm font-bold text-brown/70 uppercase tracking-wide">
 
-                    Phone Number
+                    Phone Number <span className="text-coral">*</span>
                   </label>
                   <input
                     type="tel"
                     id="phone"
+                    required
                     className="w-full px-4 py-3 rounded-xl bg-white border border-brown/10 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all"
-                    placeholder="+91 XXXXX XXXXX" />
+                    placeholder="Your Phone Number" />
 
                 </div>
               </div>
@@ -102,13 +104,14 @@ export function ContactSection() {
                   htmlFor="email"
                   className="text-sm font-bold text-brown/70 uppercase tracking-wide">
 
-                  Email Address
+                  Email Address <span className="text-coral">*</span>
                 </label>
                 <input
                   type="email"
                   id="email"
+                  required
                   className="w-full px-4 py-3 rounded-xl bg-white border border-brown/10 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all"
-                  placeholder="john@example.com" />
+                  placeholder="Your Email Address" />
 
               </div>
 
