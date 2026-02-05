@@ -38,10 +38,10 @@ export function Navigation() {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <Heart size={20} fill="currentColor" />
+            <div className="w-12 h-12 rounded-full bg-burgundy flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-md">
+              <Heart size={24} fill="currentColor" />
             </div>
-            <span className="font-serif text-2xl font-bold text-brown tracking-tight">
+            <span className="font-serif text-3xl font-bold text-brown tracking-tight">
               Thagai
             </span>
           </a>
