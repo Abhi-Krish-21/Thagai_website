@@ -65,7 +65,13 @@ const services = [
 
 export function ServicesGrid() {
   return (
-    <section id="services" className="py-24 bg-cream relative overflow-hidden">
+    <section id="services" className="pt-32 pb-24 bg-cream relative overflow-hidden">
+      {/* Top gradient transition from ContactSection (purple → cream) - extends above section */}
+      <div className="absolute -top-4 left-0 right-0 h-80 bg-gradient-to-b from-burgundy via-burgundy/60 via-burgundy/30 to-transparent pointer-events-none"></div>
+
+      {/* Bottom gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-cream-dark/80 via-cream-dark/40 to-transparent pointer-events-none"></div>
+
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"

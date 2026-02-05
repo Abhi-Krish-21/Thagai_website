@@ -7,11 +7,7 @@ export function ContactSection() {
       id="contact"
       className="py-24 bg-burgundy text-white relative overflow-hidden">
 
-      {/* Top gradient transition from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-cream/30 to-transparent pointer-events-none z-10"></div>
-
-      {/* Bottom gradient transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream/30 to-transparent pointer-events-none z-10"></div>
+      {/* No gradient here - ContactSection is fully purple. Gradient is in ServicesGrid */}
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">

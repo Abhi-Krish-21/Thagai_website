@@ -7,6 +7,8 @@ export function ContactSection() {
       id="contact"
       className="py-24 bg-burgundy text-white relative overflow-hidden">
 
+      {/* No gradient here - ContactSection is fully purple. Gradient is in ServicesGrid */}
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg
