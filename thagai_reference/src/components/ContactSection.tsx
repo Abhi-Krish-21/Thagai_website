@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from './ui/Button';
 import { Phone, Mail } from 'lucide-react';
 export function ContactSection() {
@@ -148,6 +147,9 @@ export function ContactSection() {
           </div>
         </div>
       </div>
+      {/* Bottom transition blend to next section (Cream) */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream via-cream/10 to-transparent pointer-events-none z-20"></div>
     </section>);
+
 
 }

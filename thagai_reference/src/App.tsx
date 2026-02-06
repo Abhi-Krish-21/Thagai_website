@@ -1,13 +1,10 @@
-import React from 'react';
 import { Navigation } from './components/Navigation';
 import { HeroSection } from './components/HeroSection';
 import { ServicesGrid } from './components/ServicesGrid';
-import { PhotoGallery } from './components/PhotoGallery';
 import { AudienceSections } from './components/AudienceSections';
 import { CareEnvironment } from './components/CareEnvironment';
 import { HowWeCare } from './components/HowWeCare';
 import { CommunityCircles } from './components/CommunityCircles';
-import { Testimonials } from './components/Testimonials';
 import { FAQsSection } from './components/FAQsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -20,12 +17,12 @@ export function App() {
         <HeroSection />
         <ContactSection />
         <ServicesGrid />
+        <CommunityCircles />
         <HowWeCare />
         <AudienceSections />
         <CareEnvironment />
-        <PhotoGallery />
-        <CommunityCircles />
-        <Testimonials />
+        {/* <PhotoGallery />
+        <Testimonials /> */}
         <FAQsSection />
       </main>
       <Footer />
