@@ -18,10 +18,10 @@ export function App() {
         <HeroSection />
         <StatsSection />
         <ServicesGrid />
-        <AudienceSections />
-        <PhotoGallery />
         <HowWeCare />
         <CommunityCircles />
+        <AudienceSections />
+        <PhotoGallery />
         <Testimonials />
         <ContactSection />
       </main>

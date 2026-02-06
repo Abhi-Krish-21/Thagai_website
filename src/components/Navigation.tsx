@@ -18,12 +18,12 @@ export function Navigation() {
     href: '#services'
   },
   {
-    name: 'For Families',
-    href: '#families'
-  },
-  {
     name: 'Community',
     href: '#community'
+  },
+  {
+    name: 'For Families',
+    href: '#families'
   },
   {
     name: 'Stories',
