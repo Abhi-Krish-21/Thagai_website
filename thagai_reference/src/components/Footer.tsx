@@ -1,6 +1,13 @@
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Twitter, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import { Logo } from './ui/Logo';
 export function Footer() {
+  const socialLinks = [
+    { Icon: Twitter, href: "https://x.com/Thagai_care", label: "X (Twitter)" },
+    { Icon: Instagram, href: "https://www.instagram.com/thagai.care", label: "Instagram" },
+    { Icon: Linkedin, href: "https://www.linkedin.com/in/thagai-care-1b34593a8/", label: "LinkedIn" },
+    { Icon: MessageCircle, href: "https://wa.me/message/5BQHK3KZ2SV2C1", label: "WhatsApp" }
+  ];
+
   return (
     <footer className="bg-burgundy text-cream pt-20 pb-10 relative overflow-hidden">
       {/* Decorative Elements */}
@@ -16,10 +23,13 @@ export function Footer() {
               through personalized support.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) =>
+              {socialLinks.map(({ Icon, href, label }, i) =>
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-coral hover:text-white transition-all duration-300 hover:-translate-y-1 border border-white/10"
                 >
                   <Icon size={18} />

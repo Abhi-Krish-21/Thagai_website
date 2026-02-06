@@ -45,9 +45,14 @@ export function CommunityCircles() {
               once: true
             }}
             transition={{
-              delay: 0.1
+              delay: 0.1,
+              type: 'spring',
+              stiffness: 300,
+              damping: 20
             }}
-            className="bg-cream p-8 rounded-3xl border border-brown/5">
+            whileHover={{ y: -12 }}
+            className="bg-burgundy/[0.02] p-8 md:p-10 rounded-[2.5rem] border-2 border-burgundy/15 hover:border-burgundy/60 hover:bg-white shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-burgundy/10 transition-colors duration-500"></div>
             <h3 className="font-serif text-2xl md:text-3xl font-bold text-brown mb-4">
               Make friends, stay active, get help
             </h3>
@@ -80,9 +85,14 @@ export function CommunityCircles() {
               once: true
             }}
             transition={{
-              delay: 0.2
+              delay: 0.2,
+              type: 'spring',
+              stiffness: 300,
+              damping: 20
             }}
-            className="bg-cream p-8 rounded-3xl border border-brown/5">
+            whileHover={{ y: -12 }}
+            className="bg-burgundy/[0.02] p-8 md:p-10 rounded-[2.5rem] border-2 border-burgundy/15 hover:border-burgundy/40 hover:bg-white shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-burgundy/10 transition-colors duration-500"></div>
             <h3 className="font-serif text-2xl md:text-3xl font-bold text-brown mb-4">
               Care for your parents, even from miles away
             </h3>
