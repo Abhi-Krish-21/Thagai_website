@@ -1,25 +1,27 @@
 import { motion } from 'framer-motion';
+import { PhoneCall, ClipboardList, Home, HeartHandshake } from 'lucide-react';
+
 const steps = [
   {
-    number: '01',
+    icon: PhoneCall,
     title: 'Give Us a Call',
     description:
       'Elder care made simple. Call or fill the form—any service, anytime.'
   },
   {
-    number: '02',
+    icon: ClipboardList,
     title: 'Personalized Plan',
     description:
       'We understand your needs and craft a custom care plan—putting the right help in the right place.'
   },
   {
-    number: '03',
+    icon: Home,
     title: 'Service at Your Doorstep',
     description:
       'Sit back and relax while our trusted providers deliver care right to your home.'
   },
   {
-    number: '04',
+    icon: HeartHandshake,
     title: 'We\'re Always Here',
     description:
       'Loved it? Need it again? Just reach out—we\'re here whenever you need us.'
@@ -57,31 +59,32 @@ export function HowWeCare() {
           {steps.map((step, index) =>
             <motion.div
               key={index}
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
               transition={{
-                delay: index * 0.2
+                duration: 0.5,
+                delay: index * 0.1,
+                type: 'spring',
+                stiffness: 100
               }}
-              className="relative bg-cream p-8 rounded-3xl shadow-sm border border-brown/5 text-center group hover:shadow-md transition-shadow">
-
-              <div className="w-16 h-16 mx-auto bg-terracotta text-white rounded-full flex items-center justify-center text-xl font-bold font-serif mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300 relative z-10">
-                {step.number}
+              whileHover={{
+                y: -8,
+                transition: { duration: 0.3 }
+              }}
+              className="group"
+            >
+              <div className="bg-cream rounded-3xl p-8 h-full border border-brown/5 shadow-sm hover:shadow-lg hover:border-burgundy/20 transition-all duration-300 text-center">
+                <div className="w-16 h-16 mx-auto bg-burgundy/10 text-burgundy rounded-full flex items-center justify-center mb-6 group-hover:bg-burgundy group-hover:text-white transition-all duration-300 relative z-10">
+                  <step.icon size={28} strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-xl font-bold text-brown mb-3 group-hover:text-burgundy transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-brown/60 text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </div>
-              <h3 className="font-serif text-xl font-bold text-brown mb-3">
-                {step.title}
-              </h3>
-              <p className="text-brown/70 text-sm leading-relaxed">
-                {step.description}
-              </p>
             </motion.div>
           )}
         </div>
