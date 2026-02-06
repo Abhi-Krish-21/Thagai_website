@@ -37,13 +37,6 @@ export function HeroSection() {
             }}
             className="space-y-8 max-w-2xl">
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-burgundy/10 shadow-sm">
-              <span className="flex h-2 w-2 rounded-full bg-coral animate-pulse"></span>
-              <span className="text-sm font-medium text-burgundy tracking-wide uppercase">
-                Premium Elder Care
-              </span>
-            </div>
-
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-brown leading-[1.1]">
               Care Made{' '}
               <span className="relative inline-block">

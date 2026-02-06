@@ -4,12 +4,8 @@ import { ArrowRight } from 'lucide-react';
 
 export function CommunityCircles() {
   return (
-    <section id="community" className="py-24 bg-gradient-to-b from-cream via-white to-cream-dark overflow-hidden relative">
-      {/* Top gradient transition */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-cream to-transparent pointer-events-none z-10"></div>
+    <section id="community" className="pt-4 pb-24 bg-gradient-to-b from-cream via-white to-cream-dark overflow-hidden relative">
 
-      {/* Bottom gradient transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream-dark to-transparent pointer-events-none z-10"></div>
 
       {/* Floating background elements */}
       <div className="absolute top-20 right-[12%] w-52 h-52 bg-burgundy/4 rounded-full blur-3xl"></div>
@@ -23,7 +19,7 @@ export function CommunityCircles() {
       <div className="absolute bottom-20 left-[30%] w-3 h-3 bg-gold/15 rounded-full animate-float-delayed"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-brown mb-4">
             Join the Thagai{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-burgundy to-coral">
