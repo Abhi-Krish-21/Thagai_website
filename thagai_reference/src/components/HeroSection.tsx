@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden bg-cream">
+    <section className="relative min-h-[90vh] flex items-center pt-12 pb-6 overflow-hidden bg-cream">
       {/* Bottom gradient transition to next section (burgundy/purple) - ends at full burgundy to match ContactSection */}
       <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-b from-transparent via-burgundy/40 to-burgundy pointer-events-none z-10"></div>
       {/* Background Decorative Elements */}
@@ -62,13 +62,13 @@ export function HeroSection() {
               and transport to meals and daily support, everything your family needs
               is in one place—hassle-free.
             </p>
-
+            {/* 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="group">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Content - Photo Mosaic */}

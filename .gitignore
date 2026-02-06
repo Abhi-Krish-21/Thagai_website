@@ -152,3 +152,8 @@ postgres_docs.txt
 # SCRIPTS
 # ========================================
 *.ps1
+
+# ========================================
+# REFERENCE/DOCUMENTATION FOLDERS
+# ========================================
+reference-repo-dummy-main

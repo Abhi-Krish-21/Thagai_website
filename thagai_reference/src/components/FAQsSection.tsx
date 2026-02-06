@@ -81,10 +81,7 @@ export function FAQsSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-cream-dark via-cream to-cream relative overflow-hidden">
-      {/* Top gradient transition */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-cream-dark to-transparent pointer-events-none z-10"></div>
-
+    <section className="py-8 bg-cream relative overflow-hidden">
       {/* Floating background elements */}
       <div className="absolute top-20 right-[10%] w-48 h-48 bg-burgundy/4 rounded-full blur-3xl"></div>
       <div className="absolute bottom-32 left-[8%] w-56 h-56 bg-coral/3 rounded-full blur-3xl"></div>

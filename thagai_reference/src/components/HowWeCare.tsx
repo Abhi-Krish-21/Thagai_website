@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 const steps = [
   {
@@ -28,7 +27,7 @@ const steps = [
 
 export function HowWeCare() {
   return (
-    <section className="pt-4 pb-24 bg-gradient-to-b from-cream-dark via-cream to-cream-dark relative overflow-hidden">
+    <section className="py-12 bg-cream relative overflow-hidden">
 
 
 

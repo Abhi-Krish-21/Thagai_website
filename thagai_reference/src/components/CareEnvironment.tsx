@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Shield, Heart, Home, Users, Sparkles, Check } from 'lucide-react';
+import { Shield, Heart, Home, Users, Sparkles } from 'lucide-react';
 
 const features = [
   {
@@ -26,14 +25,14 @@ const features = [
   }
 ];
 
-const promises = [
+/* const promises = [
   'Daily wellness check-ins',
   'Personalized care routines',
   'Regular family updates',
   'Emergency response ready',
   'Engaging social activities',
   'Nutritious meal planning'
-];
+]; */
 
 export function CareEnvironment() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -55,14 +54,8 @@ export function CareEnvironment() {
   return (
     <section
       ref={containerRef}
-      className="relative py-24 overflow-hidden bg-gradient-to-b from-cream-dark via-cream to-cream-dark"
+      className="relative pt-24 pb-12 overflow-hidden bg-cream"
     >
-      {/* Top gradient transition */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-cream-dark to-transparent pointer-events-none z-20"></div>
-
-      {/* Bottom gradient transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream-dark to-transparent pointer-events-none z-20"></div>
-
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Soft floating shapes with parallax */}
@@ -188,10 +181,9 @@ export function CareEnvironment() {
           ))}
         </div>
 
-        {/* Lower Section - Promise & Assurance */}
+        {/* Lower Section - Promise & Assurance
         <div className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Visual */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -200,7 +192,6 @@ export function CareEnvironment() {
               className="relative"
             >
               <div className="relative">
-                {/* Main image container */}
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.4 }}
@@ -214,7 +205,6 @@ export function CareEnvironment() {
                   <div className="absolute inset-0 bg-gradient-to-t from-burgundy/40 via-transparent to-transparent" />
                 </motion.div>
 
-                {/* Floating card */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -233,12 +223,10 @@ export function CareEnvironment() {
                   </p>
                 </motion.div>
 
-                {/* Background decoration */}
                 <div className="absolute top-6 -left-6 w-full h-full bg-burgundy/10 rounded-[2.5rem] -z-10" />
               </div>
             </motion.div>
 
-            {/* Right - Content */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -259,7 +247,6 @@ export function CareEnvironment() {
                 </p>
               </div>
 
-              {/* Promise list */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {promises.map((promise, index) => (
                   <motion.div
@@ -278,7 +265,6 @@ export function CareEnvironment() {
                 ))}
               </div>
 
-              {/* CTA */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -304,7 +290,7 @@ export function CareEnvironment() {
               </motion.div>
             </motion.div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

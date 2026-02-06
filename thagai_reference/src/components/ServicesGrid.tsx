@@ -90,7 +90,7 @@ export function ServicesGrid() {
   };
 
   return (
-    <section id="services" className="pt-0 pb-24 bg-cream relative overflow-hidden">
+    <section id="services" className="pt-0 pb-16 bg-cream relative overflow-hidden">
 
       {/* Background Pattern */}
       <div

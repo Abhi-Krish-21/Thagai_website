@@ -1,10 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 export function CommunityCircles() {
   return (
-    <section id="community" className="pt-4 pb-24 bg-gradient-to-b from-cream via-white to-cream-dark overflow-hidden relative">
+    <section id="community" className="py-12 bg-cream overflow-hidden relative">
 
 
       {/* Floating background elements */}
