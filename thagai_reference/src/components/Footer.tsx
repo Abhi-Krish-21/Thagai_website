@@ -2,8 +2,8 @@ import { Twitter, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import { Logo } from './ui/Logo';
 export function Footer() {
   const socialLinks = [
-    { Icon: Twitter, href: "https://x.com/Thagai_care?t=kJi4KYidkmLsExFt008PDQ&s=08", label: "X (Twitter)" },
-    { Icon: Instagram, href: "https://www.instagram.com/thagai.care?utm_source=qr&igsh=MTN6Z3BsOGxxYndnYg==", label: "Instagram" },
+    { Icon: Twitter, href: "https://x.com/Thagai_care", label: "X (Twitter)" },
+    { Icon: Instagram, href: "https://www.instagram.com/thagai.care", label: "Instagram" },
     { Icon: Linkedin, href: "https://www.linkedin.com/in/thagai-care-1b34593a8/", label: "LinkedIn" },
     { Icon: MessageCircle, href: "https://wa.me/message/5BQHK3KZ2SV2C1", label: "WhatsApp" }
   ];

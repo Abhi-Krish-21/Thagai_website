@@ -42,9 +42,16 @@ export function ContactSection() {
       const isJson = contentType && contentType.includes('application/json');
 
       if (response.ok && isJson) {
-        setStatus('success');
-        reset();
-        setTimeout(() => setStatus('idle'), 5000);
+        const result = await response.json();
+
+        if (response.status === 207) {
+          setStatus('error');
+          setErrorMessage(`Message partially sent: ${result.warnings?.join(', ') || 'Email failed'}`);
+        } else {
+          setStatus('success');
+          reset();
+          setTimeout(() => setStatus('idle'), 5000);
+        }
       } else {
         let errorMessage = 'Something went wrong';
         if (response.ok && !isJson) {
