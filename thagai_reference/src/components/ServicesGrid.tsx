@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import {
   Car,
@@ -74,7 +74,6 @@ const services = [
 
 export function ServicesGrid() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   const scroll = (direction: 'left' | 'right') => {
     if (containerRef.current) {
@@ -87,14 +86,11 @@ export function ServicesGrid() {
   };
 
   const handleScroll = () => {
-    if (containerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
-      setScrollProgress(scrollLeft / (scrollWidth - clientWidth));
-    }
+    // Scroll progress logic removed
   };
 
   return (
-    <section id="services" className="pt-16 pb-24 bg-cream relative overflow-hidden">
+    <section id="services" className="pt-0 pb-16 bg-cream relative overflow-hidden">
 
       {/* Background Pattern */}
       <div
@@ -180,13 +176,7 @@ export function ServicesGrid() {
         </div>
 
         {/* Custom Progress Bar */}
-        <div className="mt-8 h-1 w-full bg-brown/10 rounded-full overflow-hidden">
-          <motion.div
-            className="h-full bg-burgundy"
-            style={{ width: `${(scrollProgress * 100).toFixed(2)}%` }}
-            initial={false}
-          />
-        </div>
+
       </div>
     </section>
   );

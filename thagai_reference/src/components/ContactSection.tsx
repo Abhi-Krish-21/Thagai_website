@@ -4,7 +4,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-24 bg-burgundy text-white relative overflow-hidden">
+      className="pt-12 pb-40 bg-burgundy text-white relative overflow-hidden">
 
       {/* No gradient here - ContactSection is fully purple. Gradient is in ServicesGrid */}
 
@@ -48,7 +48,7 @@ export function ContactSection() {
                   <div className="text-sm text-cream/70 uppercase tracking-wider mb-1">
                     Call Us Anytime
                   </div>
-                  <div className="text-3xl font-serif font-bold">
+                  <div className="text-2xl font-serif font-bold">
                     +91 80726 50628
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export function ContactSection() {
         </div>
       </div>
       {/* Bottom transition blend to next section (Cream) */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream via-cream/10 to-transparent pointer-events-none z-20"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-cream pointer-events-none z-0"></div>
     </section>);
 
 

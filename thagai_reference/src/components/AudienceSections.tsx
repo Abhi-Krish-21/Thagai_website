@@ -1,200 +1,180 @@
-import React from 'react';
-import { Button } from './ui/Button';
-import { Check, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { Check, Heart, Sun } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 export function AudienceSections() {
+  const [activeSection, setActiveSection] = useState<'seniors' | 'families' | null>(null);
+
   return (
-    <section id="families" className="py-24 bg-gradient-to-b from-cream-dark via-cream-accent to-cream-dark overflow-hidden relative">
-      {/* Top gradient transition */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-cream-dark to-transparent pointer-events-none z-10"></div>
+    <section id="audience" className="relative min-h-screen overflow-hidden bg-cream pt-14 pb-6">
 
-      {/* Bottom gradient transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream-dark to-transparent pointer-events-none z-10"></div>
-
-      {/* Floating background elements */}
-      <div className="absolute top-40 right-[5%] w-64 h-64 bg-teal/5 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-[3%] w-48 h-48 bg-burgundy/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-40 right-[20%] w-56 h-56 bg-coral/5 rounded-full blur-3xl"></div>
-
-      {/* Small floating dots */}
-      <div className="absolute top-20 left-[15%] w-3 h-3 bg-teal/20 rounded-full animate-float"></div>
-      <div className="absolute top-1/3 right-[10%] w-2 h-2 bg-burgundy/15 rounded-full animate-float-delayed"></div>
-      <div className="absolute bottom-1/4 left-[8%] w-4 h-4 bg-coral/10 rounded-full animate-float"></div>
-      <div className="absolute bottom-32 right-[30%] w-2 h-2 bg-gold/20 rounded-full animate-float-delayed"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        {/* For Seniors */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 mb-32 relative">
-          {/* Decorative Background Blob */}
-          <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-teal/5 rounded-full blur-3xl -z-10"></div>
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: -50
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            className="lg:w-1/2 relative">
-
-            <div className="relative z-10">
-              <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop"
-                alt="Senior woman doctor consultation"
-                className="rounded-[3rem] shadow-2xl w-full max-w-md mx-auto lg:mx-0 rotate-[-3deg] border-8 border-white" />
-
-              <div className="absolute -bottom-10 -right-10 bg-white p-6 rounded-2xl shadow-xl max-w-[200px] hidden md:block">
-                <p className="font-serif text-lg italic text-brown">
-                  "I feel more independent than ever."
-                </p>
-              </div>
-            </div>
-            {/* Background shape */}
-            <div className="absolute top-10 -left-10 w-full h-full bg-teal rounded-[3rem] -z-10 rotate-[3deg] opacity-20"></div>
-          </motion.div>
-
-          <div className="lg:w-1/2 space-y-8">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-teal/10 text-teal-dark text-sm font-bold tracking-wide uppercase">
-              For Seniors
-            </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-brown leading-tight">
-              Maintain Your{' '}
-              <span className="text-teal italic">Independence</span> & Joy
-            </h2>
-            <p className="text-lg text-brown/70 leading-relaxed">
-              Aging shouldn't mean giving up what you love. Our care empowers
-              you to maintain your independence, stay active in your community,
-              and enjoy the comfort of your own home.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-              'Daily routine support',
-              'Social connection',
-              'Transportation help',
-              'Dignified care'].
-              map((item, i) =>
-              <div
-                key={i}
-                className="flex items-center gap-3 p-3 rounded-xl bg-white/50 border border-brown/5">
-
-                  <div className="w-8 h-8 rounded-full bg-teal text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                    <Check size={16} strokeWidth={3} />
-                  </div>
-                  <span className="font-medium text-brown">{item}</span>
-                </div>
-              )}
-            </div>
-
-            <Button
-              variant="primary"
-              className="mt-4 bg-teal hover:bg-teal-dark border-transparent">
-
-              Explore Senior Services
-            </Button>
-          </div>
+        <div className="text-center mb-16">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-burgundy font-bold tracking-widest uppercase text-sm mb-3 block"
+          >
+            Who We Serve
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight"
+          >
+            <span className="text-brown">Care That</span> <span className="text-coral">Connects</span>
+            <br />
+            <span className="text-teal">Generations</span>
+          </motion.h2>
         </div>
 
-        {/* For Families */}
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 relative">
-          {/* Decorative Background Blob */}
-          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-coral/5 rounded-full blur-3xl -z-10"></div>
+        <div className="relative mt-8">
+          <div className="grid md:grid-cols-3 gap-8 items-center">
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: 50
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            className="lg:w-1/2 relative">
+            {/* Seniors Card (Left) */}
+            <div
+              className={`relative group cursor-pointer transition-all duration-700 ${activeSection === 'seniors' ? 'z-30 scale-105' : 'z-10 scale-100'}`}
+              onMouseEnter={() => setActiveSection('seniors')}
+              onMouseLeave={() => setActiveSection(null)}
+            >
+              <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-brown/5">
+                <img
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop"
+                  alt="Senior independence"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
 
-            <div className="relative z-10">
-              <img
-                src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=800&auto=format&fit=crop"
-                alt="Family visiting grandmother"
-                className="rounded-[3rem] shadow-2xl w-full max-w-md mx-auto lg:ml-auto rotate-[3deg] border-8 border-white" />
+                {/* Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-t from-teal-900/90 via-teal-900/40 to-transparent transition-opacity duration-500 ${activeSection === 'seniors' ? 'opacity-95' : 'opacity-80'}`}></div>
 
-              <div className="absolute -top-10 -left-10 bg-white p-6 rounded-2xl shadow-xl max-w-[200px] hidden md:block">
-                <div className="flex -space-x-2 mb-2">
-                  {[1, 2, 3].map((i) =>
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white">
-                  </div>
-                  )}
+                {/* Top Label */}
+                <div className="absolute top-8 left-8 z-20">
+                  <span className="inline-flex items-center gap-2 bg-white text-teal-dark px-5 py-2.5 rounded-full text-xs font-bold tracking-wide uppercase shadow-xl">
+                    <Sun size={15} className="text-teal" /> FOR SENIORS
+                  </span>
                 </div>
-                <p className="font-serif text-sm text-brown font-bold">
-                  Trusted by families like yours
-                </p>
+
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+
+                  <h2 className="text-3xl font-serif font-bold text-white mb-4">
+                    Your <span className="text-teal-300">Independence</span>,
+                    <br />Our Priority
+                  </h2>
+
+                  <motion.div
+                    className="space-y-3 mb-6"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{
+                      opacity: activeSection === 'seniors' ? 1 : 0.8,
+                      height: 'auto',
+                      y: activeSection === 'seniors' ? 0 : 10
+                    }}
+                  >
+                    {['Daily routine support', 'Social connection', 'Transportation help', 'Dignified care'].map((item, idx) => (
+                      <div key={idx} className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-teal-300" />
+                        <span className="text-white/90 text-sm font-medium">{item}</span>
+                      </div>
+                    ))}
+                  </motion.div>
+
+
+                </div>
               </div>
             </div>
-            {/* Background shape */}
-            <div className="absolute top-10 -right-10 w-full h-full bg-coral rounded-[3rem] -z-10 rotate-[-3deg] opacity-20"></div>
-          </motion.div>
 
-          <div className="lg:w-1/2 space-y-8">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-coral/10 text-coral-dark text-sm font-bold tracking-wide uppercase">
-              For Families
-            </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-brown leading-tight">
-              Total <span className="text-coral italic">Peace of Mind</span> for
-              You
-            </h2>
-            <p className="text-lg text-brown/70 leading-relaxed">
-              We act as an extension of your family, providing reliable care and
-              constant communication so you can rest easy knowing your loved one
-              is safe, happy, and well-cared for.
-            </p>
+            {/* Middle Overlapping Card */}
+            <div className="relative z-20 my-8 md:my-0">
+              <div className="bg-white rounded-[2.5rem] shadow-2xl p-8 lg:p-12 text-center transform md:scale-105 border border-brown/5 relative overflow-hidden group">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-coral via-burgundy to-teal"></div>
 
-            <div className="space-y-4">
-              {[
-              {
-                title: 'Real-time Updates',
-                desc: 'Get photos and notes after every visit.'
-              },
-              {
-                title: 'Consistent Caregivers',
-                desc: 'Familiar faces your loved one trusts.'
-              },
-              {
-                title: '24/7 Support',
-                desc: 'We are always just a phone call away.'
-              }].
-              map((item, i) =>
-              <div key={i} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-coral/20 flex items-center justify-center text-coral-dark flex-shrink-0 mt-1">
-                    <Check size={20} strokeWidth={2.5} />
+                {/* Decorative background circle */}
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-burgundy/5 rounded-full blur-2xl"></div>
+
+                <div className="w-20 h-20 bg-gradient-to-br from-coral to-teal rounded-2xl rotate-3 mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform duration-500">
+                  <Heart className="w-10 h-10 text-white fill-current" />
+                </div>
+
+                <h3 className="text-2xl font-serif font-bold text-brown mb-4">
+                  One Family,
+                  <br />Complete Care
+                </h3>
+                <p className="text-brown/70 leading-relaxed mb-8 text-sm lg:text-base">
+                  Whether support for independence or peace of mind for family, we bridge the gap with comprehensive care.
+                </p>
+
+                <div className="flex items-center justify-center space-x-6 pt-6 border-t border-brown/10">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-coral">24/7</div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-brown/50">Support</div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-brown text-lg">
-                      {item.title}
-                    </h4>
-                    <p className="text-brown/70">{item.desc}</p>
+                  <div className="w-px h-12 bg-brown/10"></div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-teal">100%</div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-brown/50">Trusted</div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
-            <Button
-              variant="primary"
-              className="mt-4 bg-coral hover:bg-coral-dark border-transparent">
+            {/* Families Card (Right) */}
+            <div
+              className={`relative group cursor-pointer transition-all duration-700 ${activeSection === 'families' ? 'z-30 scale-105' : 'z-10 scale-100'}`}
+              onMouseEnter={() => setActiveSection('families')}
+              onMouseLeave={() => setActiveSection(null)}
+            >
+              <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-brown/5">
+                <img
+                  src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=800&auto=format&fit=crop"
+                  alt="Family peace of mind"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
 
-              Family Support Guide <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+                {/* Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-t from-coral-900/90 via-coral-900/40 to-transparent transition-opacity duration-500 ${activeSection === 'families' ? 'opacity-95' : 'opacity-80'}`}></div>
+
+                {/* Top Label */}
+                <div className="absolute top-8 right-8 z-20">
+                  <span className="inline-flex items-center gap-2 bg-white text-coral-dark px-5 py-2.5 rounded-full text-xs font-bold tracking-wide uppercase shadow-xl">
+                    <Heart size={15} className="text-coral" /> FOR FAMILIES
+                  </span>
+                </div>
+
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+
+                  <h2 className="text-3xl font-serif font-bold text-white mb-4">
+                    Complete <span className="text-coral-300">Peace</span>
+                    <br />of Mind
+                  </h2>
+
+                  <motion.div
+                    className="space-y-3 mb-6"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{
+                      opacity: activeSection === 'families' ? 1 : 0.8,
+                      height: 'auto',
+                      y: activeSection === 'families' ? 0 : 10
+                    }}
+                  >
+                    {['Real-time updates', 'Consistent caregivers', '24/7 support', 'Family trusted'].map((item, idx) => (
+                      <div key={idx} className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-coral-300" />
+                        <span className="text-white/90 text-sm font-medium">{item}</span>
+                      </div>
+                    ))}
+                  </motion.div>
+
+
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }
