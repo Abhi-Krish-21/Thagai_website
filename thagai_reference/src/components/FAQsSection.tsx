@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
@@ -42,21 +42,33 @@ function FAQItem({ question, answer, isOpen, onClick }: {
   onClick: () => void;
 }) {
   return (
-    <div className="border-b border-brown/10 last:border-b-0">
+    <motion.div
+      initial={false}
+      animate={{
+        backgroundColor: isOpen ? '#ffffff' : 'rgba(255, 255, 255, 0.6)',
+        borderColor: isOpen ? 'rgba(71, 41, 76, 0.2)' : 'rgba(71, 41, 76, 0.05)',
+        scale: isOpen ? 1.02 : 1
+      }}
+      className="rounded-2xl border transition-all duration-300 overflow-hidden mb-4"
+    >
       <button
         onClick={onClick}
-        className="w-full py-6 flex items-center justify-between text-left group"
+        className="w-full px-6 py-5 flex items-center justify-between text-left group"
       >
-        <span className="font-serif text-lg font-bold text-brown group-hover:text-burgundy transition-colors pr-4">
-          {question}
-        </span>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-          className="flex-shrink-0"
-        >
-          <ChevronDown size={24} className="text-burgundy" />
-        </motion.div>
+        <div className="flex items-center gap-4">
+          <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-burgundy text-white shadow-md' : 'bg-burgundy/5 text-burgundy'
+            }`}>
+            <HelpCircle size={20} strokeWidth={2.5} />
+          </div>
+          <span className={`font-serif text-lg font-bold transition-colors duration-300 ${isOpen ? 'text-burgundy' : 'text-brown group-hover:text-burgundy'
+            }`}>
+            {question}
+          </span>
+        </div>
+        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-burgundy/10 text-burgundy rotate-180' : 'text-brown/40'
+          }`}>
+          <ChevronDown size={20} />
+        </div>
       </button>
       <AnimatePresence>
         {isOpen && (
@@ -64,54 +76,80 @@ function FAQItem({ question, answer, isOpen, onClick }: {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <p className="pb-6 text-brown/70 leading-relaxed">
-              {answer}
-            </p>
+            <div className="px-6 pb-6 pt-0 pl-[4.5rem]">
+              <p className="text-brown/80 leading-relaxed font-sans">
+                {answer}
+              </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div >
   );
 }
 
 export function FAQsSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-8 bg-cream relative overflow-hidden">
-      {/* Floating background elements */}
-      <div className="absolute top-20 right-[10%] w-48 h-48 bg-burgundy/4 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-32 left-[8%] w-56 h-56 bg-coral/3 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-[5%] w-40 h-40 bg-teal/3 rounded-full blur-3xl"></div>
-
-      {/* Small floating dots */}
-      <div className="absolute top-32 left-[15%] w-2 h-2 bg-burgundy/15 rounded-full animate-float"></div>
-      <div className="absolute bottom-40 right-[20%] w-3 h-3 bg-coral/15 rounded-full animate-float-delayed"></div>
-      <div className="absolute top-1/3 right-[8%] w-2 h-2 bg-teal/15 rounded-full animate-float"></div>
+    <section className="pt-12 pb-24 bg-cream relative overflow-hidden" id="faqs">
+      {/* Rich Background Gradients */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-burgundy/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-brown mb-4">
-            FAQs
-          </h2>
-          <p className="text-lg text-brown/70 max-w-2xl mx-auto">
-            Thagai gives the care you need to live the life you love
-          </p>
-        </div>
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
 
-        <div className="max-w-3xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-brown/5">
-          {faqs.map((faq, index) => (
-            <FAQItem
-              key={index}
-              question={faq.question}
-              answer={faq.answer}
-              isOpen={openIndex === index}
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            />
-          ))}
+          {/* Left Column Content */}
+          <div className="lg:col-span-5 space-y-8 pt-1.5">
+            <div>
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-5xl font-bold text-brown mb-6 leading-tight">
+                Answers to your <br /> <span className="text-burgundy italic">Questions</span>
+              </h2>
+              <p className="text-lg text-brown/70 leading-relaxed max-w-md">
+                We know navigating care options can be overwhelming. Here are clear answers to the most common questions families ask us.
+              </p>
+            </div>
+
+            {/* Image Card - Adjusted height to align with FAQ end */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hidden lg:block">
+              <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop"
+                alt="Friendly support"
+                className="w-full h-[310px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-8">
+                <div className="text-white font-serif text-2xl mb-1">"We are here to help."</div>
+                <div className="text-white/80 text-sm font-medium uppercase tracking-wider">Thagai Care Team</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right FAQ List */}
+          <div className="lg:col-span-7">
+            <div className="space-y-2">
+              {faqs.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <FAQItem
+                    question={faq.question}
+                    answer={faq.answer}
+                    isOpen={openIndex === index}
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

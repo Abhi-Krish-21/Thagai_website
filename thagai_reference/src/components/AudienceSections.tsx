@@ -6,7 +6,7 @@ export function AudienceSections() {
   const [activeSection, setActiveSection] = useState<'seniors' | 'families' | null>(null);
 
   return (
-    <section id="audience" className="relative min-h-screen overflow-hidden bg-cream pt-14 pb-6">
+    <section id="families" className="relative min-h-screen flex items-center py-24 overflow-hidden bg-cream">
 
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -47,8 +47,11 @@ export function AudienceSections() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
+                {/* Color Shade Layer */}
+                <div className="absolute inset-0 bg-teal/20 mix-blend-multiply pointer-events-none"></div>
+
                 {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t from-teal-900/90 via-teal-900/40 to-transparent transition-opacity duration-500 ${activeSection === 'seniors' ? 'opacity-95' : 'opacity-80'}`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-t from-teal-dark via-teal-dark/40 to-transparent transition-opacity duration-500 ${activeSection === 'seniors' ? 'opacity-95' : 'opacity-80'}`}></div>
 
                 {/* Top Label */}
                 <div className="absolute top-8 left-8 z-20">
@@ -75,7 +78,7 @@ export function AudienceSections() {
                   >
                     {['Daily routine support', 'Social connection', 'Transportation help', 'Dignified care'].map((item, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
-                        <Check className="w-4 h-4 text-teal-300" />
+                        <Check className="w-4 h-4 text-coral" />
                         <span className="text-white/90 text-sm font-medium">{item}</span>
                       </div>
                     ))}
@@ -89,12 +92,12 @@ export function AudienceSections() {
             {/* Middle Overlapping Card */}
             <div className="relative z-20 my-8 md:my-0">
               <div className="bg-white rounded-[2.5rem] shadow-2xl p-8 lg:p-12 text-center transform md:scale-105 border border-brown/5 relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-coral via-burgundy to-teal"></div>
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-gold via-burgundy to-teal opacity-60"></div>
 
                 {/* Decorative background circle */}
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-burgundy/5 rounded-full blur-2xl"></div>
 
-                <div className="w-20 h-20 bg-gradient-to-br from-coral to-teal rounded-2xl rotate-3 mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform duration-500">
+                <div className="w-20 h-20 bg-burgundy rounded-2xl rotate-3 mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform duration-500">
                   <Heart className="w-10 h-10 text-white fill-current" />
                 </div>
 
@@ -133,8 +136,11 @@ export function AudienceSections() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
+                {/* Color Shade Layer */}
+                <div className="absolute inset-0 bg-coral/10 mix-blend-soft-light pointer-events-none"></div>
+
                 {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t from-coral-900/90 via-coral-900/40 to-transparent transition-opacity duration-500 ${activeSection === 'families' ? 'opacity-95' : 'opacity-80'}`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-t from-coral via-coral/40 to-transparent transition-opacity duration-500 ${activeSection === 'families' ? 'opacity-95' : 'opacity-80'}`}></div>
 
                 {/* Top Label */}
                 <div className="absolute top-8 right-8 z-20">
@@ -146,7 +152,7 @@ export function AudienceSections() {
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
 
                   <h2 className="text-3xl font-serif font-bold text-white mb-4">
-                    Complete <span className="text-coral-300">Peace</span>
+                    Complete <span className="text-coral font-extrabold">Peace</span>
                     <br />of Mind
                   </h2>
 
@@ -161,7 +167,7 @@ export function AudienceSections() {
                   >
                     {['Real-time updates', 'Consistent caregivers', '24/7 support', 'Family trusted'].map((item, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
-                        <Check className="w-4 h-4 text-coral-300" />
+                        <Check className="w-4 h-4 text-coral" />
                         <span className="text-white/90 text-sm font-medium">{item}</span>
                       </div>
                     ))}

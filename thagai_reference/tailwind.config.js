@@ -34,8 +34,8 @@ export default {
           accent: '#ebe0d5',
         },
         brown: {
-          DEFAULT: '#3D2E2A',
-          light: '#5C4640',
+          DEFAULT: '#47294C', // Replaced with Burgundy per user request (Main Colour)
+          light: '#5c3a62',
         },
       },
       fontFamily: {

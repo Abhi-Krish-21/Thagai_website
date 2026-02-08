@@ -6,6 +6,7 @@ import { CareEnvironment } from './components/CareEnvironment';
 import { HowWeCare } from './components/HowWeCare';
 import { CommunityCircles } from './components/CommunityCircles';
 import { FAQsSection } from './components/FAQsSection';
+import { Testimonials } from './components/Testimonials';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
@@ -21,8 +22,7 @@ export function App() {
         <HowWeCare />
         <AudienceSections />
         <CareEnvironment />
-        {/* <PhotoGallery />
-        <Testimonials /> */}
+        <Testimonials />
         <FAQsSection />
       </main>
       <Footer />

@@ -80,18 +80,33 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="pt-12 pb-40 bg-burgundy text-white relative overflow-hidden">
+      className="py-1 pb-10 bg-burgundy text-white relative overflow-hidden">
 
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
+      {/* Rich Background Pattern */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Existing Wave Pattern with lower opacity */}
         <svg
-          className="w-full h-full"
+          className="absolute w-full h-full opacity-5"
           viewBox="0 0 100 100"
           preserveAspectRatio="none">
           <path d="M0 100 C 20 0 50 0 100 100 Z" fill="#e6d9cd" />
         </svg>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-coral rounded-full blur-[100px] opacity-30"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal rounded-full blur-[100px] opacity-30"></div>
+
+        {/* New Decorative Gradients */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal/10 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/4"></div>
+
+        {/* Floating Icons for Dark Background */}
+        <div className="absolute top-20 left-[10%] opacity-10 animate-float">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-white">
+            <circle cx="12" cy="12" r="10" strokeWidth="0.5" />
+          </svg>
+        </div>
+        <div className="absolute bottom-40 right-[15%] opacity-10 animate-float-delayed">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-gold">
+            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -108,7 +123,7 @@ export function ContactSection() {
 
             <div className="space-y-6 pt-4">
               <div className="flex items-center gap-6 group">
-                <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-coral transition-colors">
+                <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-gold transition-colors">
                   <Phone size={28} />
                 </div>
                 <div>
@@ -154,42 +169,42 @@ export function ContactSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-bold text-brown/70 uppercase tracking-wide">
-                      Name <span className="text-coral">*</span>
+                      Name <span className="text-teal">*</span>
                     </label>
                     <input
                       {...register('name')}
                       type="text"
                       id="name"
-                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.name ? 'border-coral' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all`}
+                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.name ? 'border-red-500' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all`}
                       placeholder="Your Name" />
-                    {errors.name && <p className="text-xs text-coral font-medium mt-1">{errors.name.message}</p>}
+                    {errors.name && <p className="text-xs text-red-500 font-medium mt-1">{errors.name.message}</p>}
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="phone" className="text-sm font-bold text-brown/70 uppercase tracking-wide">
-                      Phone Number <span className="text-coral">*</span>
+                      Phone Number <span className="text-teal">*</span>
                     </label>
                     <input
                       {...register('phoneNumber')}
                       type="tel"
                       id="phone"
-                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.phoneNumber ? 'border-coral' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all`}
+                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.phoneNumber ? 'border-red-500' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all`}
                       placeholder="Your Phone Number" />
-                    {errors.phoneNumber && <p className="text-xs text-coral font-medium mt-1">{errors.phoneNumber.message}</p>}
+                    {errors.phoneNumber && <p className="text-xs text-red-500 font-medium mt-1">{errors.phoneNumber.message}</p>}
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-bold text-brown/70 uppercase tracking-wide">
-                    Email Address <span className="text-coral">*</span>
+                    Email Address <span className="text-teal">*</span>
                   </label>
                   <input
                     {...register('email')}
                     type="email"
                     id="email"
-                    className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.email ? 'border-coral' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all`}
+                    className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.email ? 'border-red-500' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all`}
                     placeholder="Your Email Address" />
-                  {errors.email && <p className="text-xs text-coral font-medium mt-1">{errors.email.message}</p>}
+                  {errors.email && <p className="text-xs text-red-500 font-medium mt-1">{errors.email.message}</p>}
                 </div>
 
                 <div className="space-y-2">
@@ -206,7 +221,7 @@ export function ContactSection() {
                 </div>
 
                 {status === 'error' && (
-                  <div className="flex items-center gap-2 text-coral bg-coral/10 p-4 rounded-xl">
+                  <div className="flex items-center gap-2 text-red-500 bg-red-500/10 p-4 rounded-xl">
                     <AlertCircle size={20} />
                     <p className="text-sm font-medium">{errorMessage}</p>
                   </div>
@@ -231,7 +246,6 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-cream pointer-events-none z-0"></div>
     </section>
   );
 }

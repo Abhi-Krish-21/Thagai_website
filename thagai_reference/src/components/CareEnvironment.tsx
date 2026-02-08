@@ -54,7 +54,7 @@ export function CareEnvironment() {
   return (
     <section
       ref={containerRef}
-      className="relative pt-24 pb-12 overflow-hidden bg-cream"
+      className="relative pt-24 pb-0 overflow-hidden bg-cream"
     >
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
