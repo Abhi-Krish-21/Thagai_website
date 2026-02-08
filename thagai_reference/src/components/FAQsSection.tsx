@@ -94,7 +94,7 @@ export function FAQsSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-cream relative overflow-hidden" id="faqs">
+    <section className="pt-12 pb-24 bg-cream relative overflow-hidden" id="faqs">
       {/* Rich Background Gradients */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-burgundy/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
