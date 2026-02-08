@@ -82,15 +82,25 @@ export function FAQsSection() {
 
   return (
     <section className="py-8 bg-cream relative overflow-hidden">
-      {/* Floating background elements */}
-      <div className="absolute top-20 right-[10%] w-48 h-48 bg-burgundy/4 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-32 left-[8%] w-56 h-56 bg-coral/3 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-[5%] w-40 h-40 bg-teal/3 rounded-full blur-3xl"></div>
+      {/* Rich Background Gradients */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-burgundy/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[150px] pointer-events-none"></div>
 
-      {/* Small floating dots */}
-      <div className="absolute top-32 left-[15%] w-2 h-2 bg-burgundy/15 rounded-full animate-float"></div>
-      <div className="absolute bottom-40 right-[20%] w-3 h-3 bg-coral/15 rounded-full animate-float-delayed"></div>
-      <div className="absolute top-1/3 right-[8%] w-2 h-2 bg-teal/15 rounded-full animate-float"></div>
+      {/* Decorative Elements */}
+      <div className="absolute top-24 left-[10%] opacity-20 animate-float pointer-events-none">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-burgundy">
+          <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
+      <div className="absolute bottom-32 right-[10%] opacity-20 animate-float-delayed pointer-events-none">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-coral">
+          <circle cx="12" cy="12" r="10" strokeWidth="0.5" />
+          <path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10 10 10 0 0 1-10-10 10 10 0 0 1 10-10z" strokeWidth="0.5" strokeDasharray="4 4" />
+        </svg>
+      </div>
+      <div className="absolute top-1/3 right-[5%] w-3 h-3 bg-teal/20 rounded-full animate-float pointer-events-none"></div>
+      <div className="absolute bottom-1/4 left-[5%] w-4 h-4 bg-burgundy/15 rounded-full animate-float-delayed pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">

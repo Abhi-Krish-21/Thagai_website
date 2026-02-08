@@ -32,7 +32,7 @@ const services = [
     icon: Users,
     title: 'Elder Social Circles',
     description: 'Creating vibrant communities and social connections to combat loneliness and foster friendships.',
-    color: 'bg-coral/5 text-coral',
+    color: 'bg-gold/5 text-gold',
     image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop'
   },
   {
@@ -60,7 +60,7 @@ const services = [
     icon: Stethoscope,
     title: 'Hospital Assistance',
     description: 'Comprehensive support during hospital visits and medical appointments with caring companions.',
-    color: 'bg-coral/5 text-coral',
+    color: 'bg-burgundy/5 text-burgundy',
     image: 'https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=400&auto=format&fit=crop'
   },
   {
@@ -92,19 +92,25 @@ export function ServicesGrid() {
   return (
     <section id="services" className="pt-0 pb-16 bg-cream relative overflow-hidden">
 
-      {/* Background Pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'radial-gradient(#47294C 1px, transparent 1px)',
-          backgroundSize: '30px 30px'
-        }}>
+      {/* Background Decorative Elements */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-burgundy/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
+
+      <div className="absolute top-24 left-[5%] opacity-10 animate-float pointer-events-none">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-burgundy">
+          <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
+      <div className="absolute top-1/2 right-[5%] opacity-15 animate-float-delayed pointer-events-none">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-gold">
+          <circle cx="12" cy="12" r="10" strokeWidth="0.5" />
+        </svg>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <span className="text-coral font-bold tracking-wider uppercase text-sm mb-2 block">
+            <span className="text-gold font-bold tracking-wider uppercase text-sm mb-2 block">
               Our Expertise
             </span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-brown">
@@ -163,7 +169,7 @@ export function ServicesGrid() {
                 </div>
 
                 <div className="p-8 flex-1 flex flex-col">
-                  <h3 className="font-serif text-2xl font-bold text-brown mb-3 group-hover:text-burgundy transition-colors">
+                  <h3 className="font-serif text-2xl font-bold text-brown mb-3 group-hover:text-gold transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-brown/70 leading-relaxed">

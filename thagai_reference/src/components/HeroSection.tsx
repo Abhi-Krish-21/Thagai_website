@@ -1,7 +1,4 @@
-import React from 'react';
-import { Button } from './ui/Button';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-12 pb-6 overflow-hidden bg-cream">
@@ -9,9 +6,21 @@ export function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-b from-transparent via-burgundy/40 to-burgundy pointer-events-none z-10"></div>
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-teal/10 rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-coral/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-        <div className="absolute top-[40%] left-[20%] w-[300px] h-[300px] bg-gold/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-teal/10 rounded-full blur-[120px] animate-blob"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[700px] h-[700px] bg-gold/10 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
+        <div className="absolute top-[40%] left-[20%] w-[400px] h-[400px] bg-burgundy/5 rounded-full blur-[100px] animate-blob animation-delay-4000"></div>
+
+        {/* Decorative Floating Icons */}
+        <div className="absolute top-1/4 left-[10%] opacity-20 animate-float">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-burgundy">
+            <circle cx="12" cy="12" r="10" strokeWidth="0.5" />
+          </svg>
+        </div>
+        <div className="absolute bottom-1/3 right-[15%] opacity-30 animate-float-delayed">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-gold">
+            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
 
         {/* Large Watermark Text */}
         <div className="absolute top-20 right-0 font-serif text-[200px] leading-none text-brown/5 opacity-20 select-none whitespace-nowrap hidden lg:block">
@@ -40,7 +49,7 @@ export function HeroSection() {
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-brown leading-[1.1]">
               Care Made{' '}
               <span className="relative inline-block">
-                <span className="relative z-10 text-burgundy">Simple</span>
+                <span className="relative z-10 text-teal">Simple</span>
                 <svg
                   className="absolute w-full h-3 -bottom-1 left-0 text-gold/40 -z-10"
                   viewBox="0 0 100 10"
@@ -54,7 +63,7 @@ export function HeroSection() {
 
                 </svg>
               </span>
-              <span className="text-coral">.</span>
+              <span className="text-teal">.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-brown/80 leading-relaxed">
@@ -136,7 +145,7 @@ export function HeroSection() {
             </motion.div>
 
             {/* Decorative Shapes */}
-            <div className="absolute top-20 left-10 w-20 h-20 bg-coral rounded-full opacity-80 animate-float"></div>
+            <div className="absolute top-20 left-10 w-20 h-20 bg-gold rounded-full opacity-80 animate-float"></div>
             <div className="absolute bottom-20 right-20 w-16 h-16 bg-teal rounded-lg rotate-12 opacity-80 animate-float-delayed"></div>
             <div className="absolute top-1/2 right-0 w-24 h-24 bg-gold/30 rounded-full blur-xl"></div>
 
