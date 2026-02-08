@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-10">
           {/* Brand Content - Extra Space */}
           <div className="space-y-4 lg:col-span-6 pr-0 lg:pr-20">
-            <Logo variant="original" size="lg" />
+            <Logo variant="light" size="lg" />
             <p className="text-cream-dark/60 text-base leading-relaxed max-w-md">
               Providing compassionate, dignified care for seniors. We are
               dedicated to enhancing the quality of life for your loved ones

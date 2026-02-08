@@ -5,22 +5,21 @@ interface LogoProps {
 
 export function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
   const sizes = {
-    sm: 'h-10',
-    md: 'h-12',
-    lg: 'h-20'
+    sm: 'h-12',
+    md: 'h-16',
+    lg: 'h-24'
   };
 
-  // Define filters: 
-  // 'light' makes it white, 
-  // 'dark' keeps it original (assuming dark logo), 
-  // 'original' has no filters for theme-colored images
-  const filterClass = variant === 'light' ? 'brightness-0 invert' : '';
+  // Switch file source based on variant
+  // 'light' is for dark backgrounds (Footer)
+  // 'dark' or 'original' is for light backgrounds (Header)
+  const src = variant === 'light' ? '/assets/logo-light.png' : '/assets/logo-dark.png';
 
   return (
     <img
-      src="/assets/logo-dark.png"
+      src={src}
       alt="Thagai"
-      className={`${sizes[size]} w-auto object-contain ${filterClass}`}
+      className={`${sizes[size]} w-auto object-contain`}
     />
   );
 }
