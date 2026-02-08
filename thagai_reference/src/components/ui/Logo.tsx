@@ -1,21 +1,24 @@
 interface LogoProps {
-  variant?: 'dark' | 'light';
+  variant?: 'dark' | 'light' | 'original';
   size?: 'sm' | 'md' | 'lg';
 }
 
 export function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
   const sizes = {
-    sm: 'h-8',
-    md: 'h-10',
-    lg: 'h-14'
+    sm: 'h-10',
+    md: 'h-12',
+    lg: 'h-20'
   };
 
-  // Use the same logo file, apply filter for light variant
+  // Define filters: 
+  // 'light' makes it white, 
+  // 'dark' keeps it original (assuming dark logo), 
+  // 'original' has no filters for theme-colored images
   const filterClass = variant === 'light' ? 'brightness-0 invert' : '';
 
   return (
     <img
-      src="/assets/logo-dark.webp"
+      src="/assets/logo-dark.png"
       alt="Thagai"
       className={`${sizes[size]} w-auto object-contain ${filterClass}`}
     />
