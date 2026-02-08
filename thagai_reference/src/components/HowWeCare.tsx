@@ -29,7 +29,7 @@ const steps = [
 
 export function HowWeCare() {
   return (
-    <section className="py-12 bg-cream relative overflow-hidden">
+    <section className="py-24 bg-cream relative overflow-hidden">
 
 
 

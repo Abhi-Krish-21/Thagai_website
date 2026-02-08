@@ -140,7 +140,7 @@ export function Testimonials() {
                   key={index}
                   initial={false}
                   animate={{
-                    x: position * 310, 
+                    x: position * 310,
                     scale: isActive ? 1.0 : 0.75, // Sleeker scaling
                     opacity: isVisible ? (isActive ? 1 : 0.45) : 0,
                     zIndex: isActive ? 30 : 20 - Math.abs(position),

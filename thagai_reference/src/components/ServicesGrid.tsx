@@ -90,7 +90,9 @@ export function ServicesGrid() {
   };
 
   return (
-    <section id="services" className="pt-0 pb-16 bg-cream relative overflow-hidden">
+    <section id="services" className="pt-16 pb-24 bg-cream relative overflow-hidden">
+      {/* Top transition from burgundy section - matched to Hero transition */}
+      <div className="absolute top-0 left-0 right-0 h-80 bg-gradient-to-b from-burgundy via-burgundy/10 to-transparent pointer-events-none z-10"></div>
 
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-burgundy/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>

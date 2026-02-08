@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function CommunityCircles() {
   return (
-    <section id="community" className="py-12 bg-cream overflow-hidden relative">
+    <section id="community" className="py-24 bg-cream overflow-hidden relative">
 
 
       {/* Floating background elements */}

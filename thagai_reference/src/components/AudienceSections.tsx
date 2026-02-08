@@ -6,7 +6,7 @@ export function AudienceSections() {
   const [activeSection, setActiveSection] = useState<'seniors' | 'families' | null>(null);
 
   return (
-    <section id="families" className="relative min-h-screen overflow-hidden bg-cream pt-14 pb-6">
+    <section id="families" className="relative min-h-screen flex items-center py-24 overflow-hidden bg-cream">
 
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">

@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-12 pb-6 overflow-hidden bg-cream">
-      {/* Bottom gradient transition to next section (burgundy/purple) - ends at full burgundy to match ContactSection */}
-      <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-b from-transparent via-burgundy/40 to-burgundy pointer-events-none z-10"></div>
+    <section className="relative min-h-screen flex items-center pt-28 pb-10 overflow-hidden bg-cream">
+      {/* Bottom gradient transition to next section (burgundy/purple) - taller for smoother fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-b from-transparent via-burgundy/10 to-burgundy pointer-events-none z-10"></div>
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-teal/10 rounded-full blur-[120px] animate-blob"></div>

@@ -80,7 +80,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="pt-12 pb-40 bg-burgundy text-white relative overflow-hidden">
+      className="py-1 pb-10 bg-burgundy text-white relative overflow-hidden">
 
       {/* Rich Background Pattern */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -246,7 +246,6 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-cream pointer-events-none z-0"></div>
     </section>
   );
 }
