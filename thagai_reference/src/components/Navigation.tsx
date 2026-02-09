@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/Button';
 import { Logo } from './ui/Logo';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,8 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,21 +18,13 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleContactClick = () => {
-    if (location.pathname !== '/') {
-      navigate('/#contact');
-      // Small timeout to allow navigation to complete before scrolling
-      setTimeout(() => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleChatClick = () => {
+    window.open('https://wa.me/message/5BQHK3KZ2SV2C1', '_blank', 'noopener,noreferrer');
     setIsMobileMenuOpen(false);
   };
 
   const navLinks = [
-    { name: 'Our Care', href: '/#services' },
+    { name: 'Our Services', href: '/#services' },
     { name: 'Community', href: '/#community' },
     { name: 'For Families', href: '/#families' },
     { name: 'Stories', href: '/#testimonials' }
@@ -63,8 +54,8 @@ export function Navigation() {
             <Button
               variant="primary"
               size="sm"
-              onClick={handleContactClick}>
-              Contact Us
+              onClick={handleChatClick}>
+              Chat With Us
             </Button>
           </div>
 
@@ -98,8 +89,8 @@ export function Navigation() {
               ))}
               <Button
                 className="w-full mt-4"
-                onClick={handleContactClick}>
-                Contact Us
+                onClick={handleChatClick}>
+                Chat
               </Button>
             </div>
           </motion.div>

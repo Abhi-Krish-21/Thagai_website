@@ -80,9 +80,7 @@ export function Footer() {
             <ul className="space-y-2 text-cream-dark/60">
               {[
                 { name: 'About Us', href: '/' },
-                { name: 'Our Care', href: '/#services' },
-                { name: 'Community', href: '/#community' },
-                { name: 'FAQs', href: '/#faqs' }
+                { name: 'Community', href: '/#community' }
               ].map((link) =>
                 <li key={link.name}>
                   <a
