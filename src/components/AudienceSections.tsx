@@ -50,28 +50,28 @@ export function AudienceSections() {
               <span className="text-teal italic">Independence</span> & Joy
             </h2>
             <p className="text-lg text-brown/70 leading-relaxed">
-              Aging shouldn't mean giving up what you love. Our care empowers
+              Aging shouldn't mean giving up what you love. Our Services empowers
               you to maintain your independence, stay active in your community,
               and enjoy the comfort of your own home.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-              'Daily routine support',
-              'Social connection',
-              'Transportation help',
-              'Dignified care'].
-              map((item, i) =>
-              <div
-                key={i}
-                className="flex items-center gap-3 p-3 rounded-xl bg-white/50 border border-brown/5">
+                'Daily routine support',
+                'Social connection',
+                'Transportation help',
+                'Dignified care'].
+                map((item, i) =>
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-white/50 border border-brown/5">
 
-                  <div className="w-8 h-8 rounded-full bg-teal text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                    <Check size={16} strokeWidth={3} />
+                    <div className="w-8 h-8 rounded-full bg-teal text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+                      <Check size={16} strokeWidth={3} />
+                    </div>
+                    <span className="font-medium text-brown">{item}</span>
                   </div>
-                  <span className="font-medium text-brown">{item}</span>
-                </div>
-              )}
+                )}
             </div>
 
             <Button
@@ -111,10 +111,10 @@ export function AudienceSections() {
               <div className="absolute -top-10 -left-10 bg-white p-6 rounded-2xl shadow-xl max-w-[200px] hidden md:block">
                 <div className="flex -space-x-2 mb-2">
                   {[1, 2, 3].map((i) =>
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white">
-                  </div>
+                    <div
+                      key={i}
+                      className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white">
+                    </div>
                   )}
                 </div>
                 <p className="font-serif text-sm text-brown font-bold">
@@ -142,31 +142,31 @@ export function AudienceSections() {
 
             <div className="space-y-4">
               {[
-              {
-                title: 'Real-time Updates',
-                desc: 'Get photos and notes after every visit.'
-              },
-              {
-                title: 'Consistent Caregivers',
-                desc: 'Familiar faces your loved one trusts.'
-              },
-              {
-                title: '24/7 Support',
-                desc: 'We are always just a phone call away.'
-              }].
-              map((item, i) =>
-              <div key={i} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-coral/20 flex items-center justify-center text-coral-dark flex-shrink-0 mt-1">
-                    <Check size={20} strokeWidth={2.5} />
+                {
+                  title: 'Real-time Updates',
+                  desc: 'Get photos and notes after every visit.'
+                },
+                {
+                  title: 'Consistent Caregivers',
+                  desc: 'Familiar faces your loved one trusts.'
+                },
+                {
+                  title: '24/7 Support',
+                  desc: 'We are always just a phone call away.'
+                }].
+                map((item, i) =>
+                  <div key={i} className="flex gap-4">
+                    <div className="w-10 h-10 rounded-full bg-coral/20 flex items-center justify-center text-coral-dark flex-shrink-0 mt-1">
+                      <Check size={20} strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-brown text-lg">
+                        {item.title}
+                      </h4>
+                      <p className="text-brown/70">{item.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-brown text-lg">
-                      {item.title}
-                    </h4>
-                    <p className="text-brown/70">{item.desc}</p>
-                  </div>
-                </div>
-              )}
+                )}
             </div>
 
             <Button

@@ -52,7 +52,7 @@ const services = [
     title: 'Maid & Cooking Services',
     description: 'Professional housekeeping and cooking services to maintain a clean, comfortable living environment.',
     color: 'bg-burgundy/5 text-burgundy',
-    image: 'https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/senior_citizens_cook.png'
   },
   {
     id: 'medicine-grocery',

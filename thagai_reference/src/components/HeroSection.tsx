@@ -99,8 +99,8 @@ export function HeroSection() {
             {/* Main Center Image */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 rounded-[3rem] overflow-hidden shadow-2xl z-20 border-4 border-white">
               <img
-                src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=800&auto=format&fit=crop"
-                alt="Happy senior couple"
+                src="/assets/senior_citizens_photo.png"
+                alt="Senior citizens at Thagai"
                 className="w-full h-full object-cover" />
 
             </div>
