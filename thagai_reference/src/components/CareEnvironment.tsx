@@ -1,25 +1,25 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Shield, Heart, Home, Users, Sparkles } from 'lucide-react';
+import { ShieldCheck, HandHeart, Armchair, UsersRound, Sparkles } from 'lucide-react';
 
 const features = [
   {
-    icon: Shield,
+    icon: ShieldCheck,
     title: 'Safe & Secure',
     description: 'A protected space where your loved ones feel secure every day.'
   },
   {
-    icon: Heart,
+    icon: HandHeart,
     title: 'Filled with Love',
     description: 'Compassionate care that feels like family, because that\'s what we are.'
   },
   {
-    icon: Home,
+    icon: Armchair,
     title: 'Home-like Comfort',
     description: 'Familiar warmth and comfort that makes every moment feel like home.'
   },
   {
-    icon: Users,
+    icon: UsersRound,
     title: 'Connected Community',
     description: 'A vibrant circle of friends, activities, and meaningful connections.'
   }
@@ -115,9 +115,9 @@ export function CareEnvironment() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-burgundy/10 text-burgundy text-sm font-medium tracking-wider uppercase mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/10 text-burgundy text-xs font-medium tracking-wider uppercase mb-6"
           >
-            <Sparkles size={16} className="text-coral" />
+            <Sparkles size={14} className="text-coral" />
             Creating a Caring Environment
           </motion.div>
 
@@ -126,7 +126,7 @@ export function CareEnvironment() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-brown mb-6 leading-tight"
+            className="font-serif text-3xl md:text-4xl font-bold text-brown mb-6 leading-tight"
           >
             A Safe Haven Where{' '}
             <span className="text-burgundy italic">Love & Care</span>{' '}
@@ -138,7 +138,7 @@ export function CareEnvironment() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-brown/70 max-w-3xl mx-auto leading-relaxed"
+            className="text-base text-brown/70 max-w-2xl mx-auto leading-relaxed"
           >
             We don't just provide care — we create an environment where your elders
             feel cherished, connected, and truly at home.
@@ -147,38 +147,55 @@ export function CareEnvironment() {
         </div>
 
         {/* Middle Section - Feature Cards with Scroll Animation */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-                type: 'spring',
-                stiffness: 100
-              }}
-              whileHover={{
-                y: -8,
-                transition: { duration: 0.3 }
-              }}
-              className="group"
-            >
-              <div className="bg-cream rounded-3xl p-8 h-full border border-brown/5 shadow-sm hover:shadow-lg hover:border-burgundy/20 transition-all duration-300">
-                <div className="w-14 h-14 rounded-2xl bg-burgundy/10 flex items-center justify-center text-burgundy mb-6 group-hover:bg-burgundy group-hover:text-white transition-all duration-300">
-                  <feature.icon size={28} strokeWidth={1.5} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
+          {features.map((feature, index) => {
+            // Assign colors based on index for variety
+            const colors = [
+              { bg: 'bg-teal/10', text: 'text-teal', border: 'hover:border-teal/30', hoverBg: 'group-hover:bg-teal' },
+              { bg: 'bg-burgundy/10', text: 'text-burgundy', border: 'hover:border-burgundy/30', hoverBg: 'group-hover:bg-burgundy' },
+              { bg: 'bg-coral/10', text: 'text-coral', border: 'hover:border-coral/30', hoverBg: 'group-hover:bg-coral' },
+              { bg: 'bg-gold/10', text: 'text-gold', border: 'hover:border-gold/30', hoverBg: 'group-hover:bg-gold' }
+            ];
+            const color = colors[index % colors.length];
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  type: 'spring',
+                  stiffness: 100
+                }}
+                whileHover={{
+                  y: -10,
+                  transition: { duration: 0.3 }
+                }}
+                className="group h-full"
+              >
+                <div className={`relative bg-white rounded-[2rem] p-6 h-full border border-white/50 shadow-sm hover:shadow-2xl ${color.border} transition-all duration-500 overflow-hidden`}>
+
+                  {/* Decorative Background Blob */}
+                  <div className={`absolute -top-10 -right-10 w-24 h-24 ${color.bg.replace('/10', '/5')} rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700`}></div>
+
+                  <div className={`relative w-14 h-14 rounded-2xl ${color.bg} flex items-center justify-center ${color.text} mb-5 ${color.hoverBg} group-hover:text-white transition-all duration-500 shadow-sm group-hover:shadow-md group-hover:rotate-6`}>
+                    <feature.icon size={28} strokeWidth={1.5} />
+                  </div>
+
+                  <h3 className="font-serif text-lg font-bold text-brown mb-2 group-hover:text-burgundy transition-colors relative z-10">
+                    {feature.title}
+                  </h3>
+
+                  <p className="text-brown/70 leading-relaxed text-xs relative z-10">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-brown mb-3 group-hover:text-burgundy transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-brown/60 leading-relaxed text-sm">
-                  {feature.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Lower Section - Promise & Assurance

@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-10">
           {/* Brand Content */}
           <div className="flex flex-col items-start space-y-4 lg:col-span-4 pr-0">
-            <div className="-ml-5">
+            <div className="-ml-20">
               <Logo variant="light" size="lg" />
             </div>
             <p className="text-cream-dark/60 text-base leading-relaxed max-w-md">
@@ -94,11 +94,11 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3 lg:text-right">
+          <div className="lg:col-span-3">
             <h4 className="font-serif text-lg font-bold text-white mb-6">
               Contact
             </h4>
-            <ul className="space-y-3 text-cream-dark/60 inline-block text-left">
+            <ul className="space-y-3 text-cream-dark/60 text-left">
               <li className="flex items-center gap-3">
                 <div className="w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 text-gold border border-white/5">
                   <Phone size={14} />

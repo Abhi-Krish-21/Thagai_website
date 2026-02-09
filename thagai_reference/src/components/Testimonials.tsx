@@ -97,20 +97,15 @@ export function Testimonials() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-16">
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-block py-1 px-3 rounded-full bg-burgundy/5 border border-burgundy/10 text-burgundy text-sm font-medium mb-4 font-sans tracking-wide uppercase"
-          >
+        <div className="text-center mb-8">
+          <span className="text-gold font-bold tracking-wider uppercase text-xs mb-2 block">
             Real Stories
-          </motion.span>
+          </span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-serif text-4xl md:text-5xl font-bold text-brown mb-6"
+            className="font-serif text-3xl md:text-4xl font-bold text-brown mb-4"
           >
             Stories of <span className="text-burgundy italic">Connection</span>
           </motion.h2>
@@ -119,7 +114,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-brown/70 max-w-2xl mx-auto"
+            className="text-base text-brown/70 max-w-2xl mx-auto"
           >
             Hear from the families who have welcomed us into their lives and homes.
           </motion.p>
@@ -127,7 +122,7 @@ export function Testimonials() {
 
         {/* Carousel Container */}
         <div
-          className="relative h-[400px] md:h-[450px] flex items-center justify-center max-w-6xl mx-auto"
+          className="relative h-[380px] flex items-center justify-center max-w-5xl mx-auto"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
@@ -140,11 +135,11 @@ export function Testimonials() {
                   key={index}
                   initial={false}
                   animate={{
-                    x: position * 310,
-                    scale: isActive ? 1.0 : 0.75, // Sleeker scaling
+                    x: position * 260, // Reduced spread
+                    scale: isActive ? 1.0 : 0.8,
                     opacity: isVisible ? (isActive ? 1 : 0.45) : 0,
                     zIndex: isActive ? 30 : 20 - Math.abs(position),
-                    rotateY: position * -20, // Slightly reduced rotation
+                    rotateY: position * -20,
                     filter: isActive ? 'blur(0px)' : 'blur(3px)',
                   }}
                   transition={{
@@ -152,9 +147,9 @@ export function Testimonials() {
                     stiffness: 200,
                     damping: 25
                   }}
-                  className={`absolute w-full max-w-[300px] md:max-w-[360px] pointer-events-none ${isActive ? 'pointer-events-auto' : ''}`}
+                  className={`absolute w-full max-w-[320px] pointer-events-none ${isActive ? 'pointer-events-auto' : ''}`}
                 >
-                  <div className="bg-white p-6 md:p-8 rounded-[2rem] shadow-xl border border-brown/5 relative overflow-hidden group">
+                  <div className="bg-white p-6 rounded-[2rem] shadow-xl border border-brown/5 relative overflow-hidden group h-[320px] flex flex-col justify-between">
                     {/* Decorative Corner */}
                     <div
                       className="absolute top-0 right-0 w-20 h-20 translate-x-10 -translate-y-10 rounded-full opacity-10 transition-transform group-hover:scale-150 duration-700"
@@ -163,14 +158,14 @@ export function Testimonials() {
 
                     {/* Quote Icon */}
                     <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-lg mb-6"
+                      className="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-lg mb-4"
                       style={{ backgroundColor: item.color }}
                     >
                       <Quote size={20} fill="currentColor" strokeWidth={0} />
                     </div>
 
-                    <div className="mb-8">
-                      <p className="font-serif italic text-lg md:text-xl text-brown/90 leading-relaxed">
+                    <div className="mb-6 flex-grow">
+                      <p className="font-serif italic text-base md:text-lg text-brown/90 leading-relaxed">
                         "{item.quote}"
                       </p>
                     </div>
