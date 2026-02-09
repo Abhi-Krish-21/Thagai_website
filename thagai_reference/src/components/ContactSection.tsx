@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from './ui/Button';
-import { Phone, Mail, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Phone, Mail, Loader2, AlertCircle } from 'lucide-react';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -156,13 +157,99 @@ export function ContactSection() {
             </h3>
 
             {status === 'success' ? (
-              <div className="flex flex-col items-center justify-center py-8 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center text-teal">
-                  <CheckCircle2 size={36} />
-                </div>
-                <h4 className="text-xl font-serif font-bold text-brown">Message Sent!</h4>
-                <p className="text-brown/70 text-sm">Thank you for reaching out. We'll be in touch with you shortly.</p>
-                <Button onClick={() => setStatus('idle')} variant="outline" size="sm">Send Another Message</Button>
+              <div className="flex flex-col items-center justify-center py-12 text-center relative overflow-hidden min-h-[400px]">
+                {/* Success Animation Container */}
+                <motion.div
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
+                  className="relative mb-8"
+                >
+                  {/* Outer pulsing rings */}
+                  {[1, 2, 3].map((i) => (
+                    <motion.div
+                      key={i}
+                      animate={{ scale: [1, 1.5], opacity: [0.3, 0] }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        delay: i * 0.4,
+                        ease: "easeOut"
+                      }}
+                      className="absolute inset-0 bg-teal/20 rounded-full blur-md"
+                    />
+                  ))}
+
+                  {/* Main Icon Circle */}
+                  <div className="w-24 h-24 bg-gradient-to-br from-teal/10 to-teal/20 rounded-full flex items-center justify-center relative z-10 shadow-lg border border-teal/20">
+                    <svg className="w-10 h-10 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <motion.path
+                        d="M20 6L9 17l-5-5"
+                        initial={{ pathLength: 0, opacity: 0 }}
+                        animate={{ pathLength: 1, opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+                      />
+                    </svg>
+                  </div>
+
+                  {/* Decorative particles */}
+                  {[
+                    { x: -40, y: -40, color: 'bg-gold' },
+                    { x: 40, y: -50, color: 'bg-burgundy' },
+                    { x: -50, y: 30, color: 'bg-teal' },
+                    { x: 50, y: 40, color: 'bg-gold' },
+                    { x: 0, y: -70, color: 'bg-teal' },
+                  ].map((p, i) => (
+                    <motion.div
+                      key={i}
+                      className={`absolute w-2 h-2 rounded-full ${p.color}`}
+                      initial={{ x: 0, y: 0, opacity: 1, scale: 0 }}
+                      animate={{
+                        x: p.x,
+                        y: p.y,
+                        opacity: 0,
+                        scale: [1, 0.5]
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        delay: 0.3,
+                        ease: "easeOut"
+                      }}
+                      style={{ top: '50%', left: '50%', marginTop: -4, marginLeft: -4 }}
+                    />
+                  ))}
+                </motion.div>
+
+                {/* Text Content */}
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.6, duration: 0.5 }}
+                  className="space-y-3 relative z-10"
+                >
+                  <h4 className="text-3xl font-serif font-bold text-brown">
+                    Thank You!
+                  </h4>
+                  <p className="text-brown/70 max-w-xs mx-auto text-lg leading-relaxed">
+                    We've received your message and will get back to you shortly.
+                  </p>
+                </motion.div>
+
+                {/* Button */}
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.9, duration: 0.5 }}
+                  className="mt-8 relative z-10"
+                >
+                  <Button
+                    onClick={() => setStatus('idle')}
+                    variant="outline"
+                    className="border-teal/30 text-teal hover:bg-teal hover:text-white transition-all hover:scale-105"
+                  >
+                    Send Another Message
+                  </Button>
+                </motion.div>
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
