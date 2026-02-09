@@ -11,7 +11,7 @@ export function ScrollToTop() {
                 if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                 }
-            }, 100);
+            }, 300);
             return () => clearTimeout(timeoutId);
         } else {
             window.scrollTo(0, 0);

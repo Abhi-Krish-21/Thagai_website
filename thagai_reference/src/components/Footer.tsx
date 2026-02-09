@@ -51,14 +51,14 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-cream-dark/60">
               {[
-                { name: 'Mobility Support', href: '/#mobility-support' },
-                { name: 'Soulful Journeys', href: '/#soulful-journeys' },
-                { name: 'Elder Social Circles', href: '/#elder-social-circles' },
-                { name: 'Home-Cooked Meals', href: '/#home-cooked-meals' },
-                { name: 'Maid & Cooking Services', href: '/#maid-cooking' },
-                { name: 'Medicine & Grocery Delivery', href: '/#medicine-grocery' },
-                { name: 'Hospital Assistance', href: '/#hospital-assistance' },
-                { name: 'Anything You Ask For', href: '/#anything-you-ask' }
+                { name: 'Mobility Support', href: '/#services' },
+                { name: 'Soulful Journeys', href: '/#services' },
+                { name: 'Elder Social Circles', href: '/#services' },
+                { name: 'Home-Cooked Meals', href: '/#services' },
+                { name: 'Maid & Cooking Services', href: '/#services' },
+                { name: 'Medicine & Grocery Delivery', href: '/#services' },
+                { name: 'Hospital Assistance', href: '/#services' },
+                { name: 'Anything You Ask For', href: '/#services' }
               ].map((item) =>
                 <li key={item.name}>
                   <a
