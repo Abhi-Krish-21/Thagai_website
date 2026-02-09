@@ -91,7 +91,7 @@ function FAQItem({ question, answer, isOpen, onClick }: {
 }
 
 export function FAQsSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section className="pt-12 pb-24 bg-cream relative overflow-hidden" id="faqs">

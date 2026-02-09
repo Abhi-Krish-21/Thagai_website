@@ -15,6 +15,7 @@ import {
 
 const services = [
   {
+    id: 'mobility-support',
     icon: Car,
     title: 'Mobility Support',
     description: 'Assistance with transportation and movement to help seniors maintain their independence and mobility.',
@@ -22,6 +23,7 @@ const services = [
     image: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop'
   },
   {
+    id: 'soulful-journeys',
     icon: Compass,
     title: 'Soulful Journeys',
     description: 'Meaningful travel experiences and spiritual journeys tailored to enrich the lives of our seniors.',
@@ -29,6 +31,7 @@ const services = [
     image: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop'
   },
   {
+    id: 'elder-social-circles',
     icon: Users,
     title: 'Elder Social Circles',
     description: 'Creating vibrant communities and social connections to combat loneliness and foster friendships.',
@@ -36,6 +39,7 @@ const services = [
     image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop'
   },
   {
+    id: 'home-cooked-meals',
     icon: UtensilsCrossed,
     title: 'Home-Cooked Meals',
     description: 'Nutritious, delicious home-style meals prepared with love and delivered fresh to your door.',
@@ -43,6 +47,7 @@ const services = [
     image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop'
   },
   {
+    id: 'maid-cooking',
     icon: Home,
     title: 'Maid & Cooking Services',
     description: 'Professional housekeeping and cooking services to maintain a clean, comfortable living environment.',
@@ -50,6 +55,7 @@ const services = [
     image: 'https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?q=80&w=400&auto=format&fit=crop'
   },
   {
+    id: 'medicine-grocery',
     icon: Pill,
     title: 'Medicine & Grocery Delivery',
     description: 'Convenient delivery of medications and groceries directly to your home, ensuring you never run out of essentials.',
@@ -57,6 +63,7 @@ const services = [
     image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=400&auto=format&fit=crop'
   },
   {
+    id: 'hospital-assistance',
     icon: Stethoscope,
     title: 'Hospital Assistance',
     description: 'Comprehensive support during hospital visits and medical appointments with caring companions.',
@@ -64,6 +71,7 @@ const services = [
     image: 'https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=400&auto=format&fit=crop'
   },
   {
+    id: 'anything-you-ask',
     icon: HelpCircle,
     title: 'Anything You Ask For',
     description: 'Flexible, personalized services to meet any specific needs or requests - we\'re here to help with whatever you need.',
@@ -151,11 +159,12 @@ export function ServicesGrid() {
           {services.map((service, index) => (
             <motion.div
               key={index}
+              id={service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex-shrink-0 w-[300px] md:w-[350px] snap-start"
+              className="flex-shrink-0 w-[300px] md:w-[350px] snap-start scroll-mt-32"
             >
               <div className="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brown/5 flex flex-col h-full">
                 <div className="relative h-48 overflow-hidden">

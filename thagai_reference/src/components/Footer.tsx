@@ -13,11 +13,13 @@ export function Footer() {
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold via-burgundy to-teal opacity-50"></div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="w-full px-4 md:px-12 lg:px-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-10">
-          {/* Brand Content - Extra Space */}
-          <div className="space-y-4 lg:col-span-6 pr-0 lg:pr-20">
-            <Logo variant="light" size="lg" />
+          {/* Brand Content */}
+          <div className="flex flex-col items-start space-y-4 lg:col-span-4 pr-0">
+            <div className="-ml-5">
+              <Logo variant="light" size="lg" />
+            </div>
             <p className="text-cream-dark/60 text-base leading-relaxed max-w-md">
               Providing compassionate, dignified care for seniors. We are
               dedicated to enhancing the quality of life for your loved ones
@@ -39,33 +41,36 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Equal-Spaced Narrow Columns */}
-          <div className="lg:col-span-2">
+          {/* Services Column */}
+          <div className="lg:col-span-3 lg:ml-auto">
             <h4 className="font-serif text-lg font-bold text-white mb-6">
               Services
             </h4>
             <ul className="space-y-2 text-cream-dark/60">
               {[
-                'Mobility Support',
-                'Soulful Journeys',
-                'Social Circles',
-                'Hospital Care',
-                'Meals'
+                { name: 'Mobility Support', href: '#mobility-support' },
+                { name: 'Soulful Journeys', href: '#soulful-journeys' },
+                { name: 'Elder Social Circles', href: '#elder-social-circles' },
+                { name: 'Home-Cooked Meals', href: '#home-cooked-meals' },
+                { name: 'Maid & Cooking Services', href: '#maid-cooking' },
+                { name: 'Medicine & Grocery Delivery', href: '#medicine-grocery' },
+                { name: 'Hospital Assistance', href: '#hospital-assistance' },
+                { name: 'Anything You Ask For', href: '#anything-you-ask' }
               ].map((item) =>
-                <li key={item}>
+                <li key={item.name}>
                   <a
-                    href="#services"
+                    href={item.href}
                     className="hover:text-gold transition-colors duration-300 flex items-center gap-2 group text-sm"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-gold/40 group-hover:bg-gold transition-colors"></span>
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               )}
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 lg:ml-auto">
             <h4 className="font-serif text-lg font-bold text-white mb-6">
               Links
             </h4>
@@ -89,11 +94,11 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3 lg:text-right">
             <h4 className="font-serif text-lg font-bold text-white mb-6">
               Contact
             </h4>
-            <ul className="space-y-3 text-cream-dark/60">
+            <ul className="space-y-3 text-cream-dark/60 inline-block text-left">
               <li className="flex items-center gap-3">
                 <div className="w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 text-gold border border-white/5">
                   <Phone size={14} />
