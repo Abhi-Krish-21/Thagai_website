@@ -19,18 +19,21 @@ export function CommunityCircles() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-10">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-brown mb-4">
+          <span className="text-gold font-bold tracking-wider uppercase text-xs mb-2 block">
+            Our Community
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-brown mb-4">
             Join the Thagai{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-burgundy to-coral">
               Community
             </span>
           </h2>
-          <p className="text-lg text-brown/70 max-w-2xl mx-auto">
+          <p className="text-base text-brown/70 max-w-2xl mx-auto mt-2">
             Two circles. One mission — better elder care and connection.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
           {/* Senior Circle */}
           <motion.div
             initial={{
@@ -51,12 +54,12 @@ export function CommunityCircles() {
               damping: 20
             }}
             whileHover={{ y: -12 }}
-            className="bg-burgundy/[0.02] p-8 md:p-10 rounded-[2.5rem] border-2 border-burgundy/15 hover:border-burgundy/60 hover:bg-white shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
+            className="bg-burgundy/[0.02] p-6 rounded-[2.5rem] border-2 border-burgundy/15 hover:border-burgundy/60 hover:bg-white shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
             <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-burgundy/10 transition-colors duration-500"></div>
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-brown mb-4">
+            <h3 className="font-serif text-xl md:text-2xl font-bold text-brown mb-3">
               Make friends, stay active, get help
             </h3>
-            <p className="text-brown/70 leading-relaxed mb-8">
+            <p className="text-base text-brown/70 leading-relaxed mb-5">
               The thagai seniors circle is where you share stories, make new
               friends, and enjoy moments that matter — temple visits, laughter over
               tea, and days you'll look forward to.
@@ -65,9 +68,9 @@ export function CommunityCircles() {
               href="https://chat.whatsapp.com/IXewRCAKB0C6oHfTfgO3PI?mode=ems_copy_t"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-burgundy text-white px-6 py-3 rounded-full font-bold hover:bg-burgundy-dark transition-colors">
+              className="flex w-fit mx-auto items-center gap-2 bg-burgundy text-white px-5 py-2.5 rounded-full font-bold hover:bg-burgundy-dark transition-colors text-sm">
               Join the senior circle
-              <ArrowRight size={20} />
+              <ArrowRight size={18} />
             </a>
           </motion.div>
 
@@ -91,12 +94,12 @@ export function CommunityCircles() {
               damping: 20
             }}
             whileHover={{ y: -12 }}
-            className="bg-burgundy/[0.02] p-8 md:p-10 rounded-[2.5rem] border-2 border-burgundy/15 hover:border-burgundy/40 hover:bg-white shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
+            className="bg-burgundy/[0.02] p-6 rounded-[2.5rem] border-2 border-burgundy/15 hover:border-burgundy/40 hover:bg-white shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
             <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-burgundy/10 transition-colors duration-500"></div>
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-brown mb-4">
+            <h3 className="font-serif text-xl md:text-2xl font-bold text-brown mb-3">
               Care for your parents, even from miles away
             </h3>
-            <p className="text-brown/70 leading-relaxed mb-8">
+            <p className="text-base text-brown/70 leading-relaxed mb-5">
               The Thagai care circle is where families stay connected. Updates,
               stories, and a trusted space that lets you know your parents are
               engaged, happy, and cared for.
@@ -105,9 +108,9 @@ export function CommunityCircles() {
               href="https://chat.whatsapp.com/IkGSloi6Xnq9zFcYJPPllb?mode=ems_copy_t"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-burgundy text-white px-6 py-3 rounded-full font-bold hover:bg-burgundy-dark transition-colors">
+              className="flex w-fit mx-auto items-center gap-2 bg-burgundy text-white px-5 py-2.5 rounded-full font-bold hover:bg-burgundy-dark transition-colors text-sm">
               Join the care circle
-              <ArrowRight size={20} />
+              <ArrowRight size={18} />
             </a>
           </motion.div>
         </div>

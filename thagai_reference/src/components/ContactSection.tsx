@@ -80,7 +80,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-1 pb-10 bg-burgundy text-white relative overflow-hidden">
+      className="min-h-screen flex items-center py-24 bg-burgundy text-white relative overflow-hidden">
 
       {/* Rich Background Pattern */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -109,132 +109,132 @@ export function ContactSection() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div className="space-y-8">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-cream">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream">
               Let's Start a Conversation
             </h2>
-            <p className="text-xl text-cream/90 leading-relaxed">
+            <p className="text-lg text-cream/90 leading-relaxed max-w-md">
               We understand that choosing care is a big decision. We're here to
               listen, answer your questions, and help you find the right path
               for your family—no pressure, just support.
             </p>
 
-            <div className="space-y-6 pt-4">
-              <div className="flex items-center gap-6 group">
-                <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-gold transition-colors">
-                  <Phone size={28} />
+            <div className="space-y-4 pt-2">
+              <div className="flex items-center gap-4 group">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-gold transition-colors">
+                  <Phone size={20} />
                 </div>
                 <div>
-                  <div className="text-sm text-cream/70 uppercase tracking-wider mb-1">
+                  <div className="text-xs text-cream/70 uppercase tracking-wider mb-0.5">
                     Call Us Anytime
                   </div>
-                  <div className="text-2xl font-serif font-bold">
+                  <div className="text-xl font-serif font-bold">
                     +91 80726 50628
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 group">
-                <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-teal transition-colors">
-                  <Mail size={28} />
+              <div className="flex items-center gap-4 group">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-teal transition-colors">
+                  <Mail size={20} />
                 </div>
                 <div>
-                  <div className="text-sm text-cream/70 uppercase tracking-wider mb-1">
+                  <div className="text-xs text-cream/70 uppercase tracking-wider mb-0.5">
                     Email Us
                   </div>
-                  <div className="text-xl font-serif">hello.thagai@gmail.com</div>
+                  <div className="text-lg font-serif">hello.thagai@gmail.com</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-cream rounded-[2.5rem] p-8 md:p-10 shadow-2xl text-brown">
-            <h3 className="font-serif text-2xl font-bold mb-6">
+          <div className="bg-cream rounded-[2rem] p-6 md:p-8 shadow-2xl text-brown max-w-lg mx-auto w-full">
+            <h3 className="font-serif text-xl font-bold mb-4">
               Send Us a Message
             </h3>
 
             {status === 'success' ? (
-              <div className="flex flex-col items-center justify-center py-12 text-center space-y-4">
-                <div className="w-20 h-20 rounded-full bg-teal/10 flex items-center justify-center text-teal">
-                  <CheckCircle2 size={48} />
+              <div className="flex flex-col items-center justify-center py-8 text-center space-y-4">
+                <div className="w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center text-teal">
+                  <CheckCircle2 size={36} />
                 </div>
-                <h4 className="text-2xl font-serif font-bold text-brown">Message Sent!</h4>
-                <p className="text-brown/70">Thank you for reaching out. We'll be in touch with you shortly.</p>
-                <Button onClick={() => setStatus('idle')} variant="outline">Send Another Message</Button>
+                <h4 className="text-xl font-serif font-bold text-brown">Message Sent!</h4>
+                <p className="text-brown/70 text-sm">Thank you for reaching out. We'll be in touch with you shortly.</p>
+                <Button onClick={() => setStatus('idle')} variant="outline" size="sm">Send Another Message</Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-bold text-brown/70 uppercase tracking-wide">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label htmlFor="name" className="text-xs font-bold text-brown/70 uppercase tracking-wide">
                       Name <span className="text-teal">*</span>
                     </label>
                     <input
                       {...register('name')}
                       type="text"
                       id="name"
-                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.name ? 'border-red-500' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all`}
+                      className={`w-full px-3 py-2 rounded-lg bg-white border ${errors.name ? 'border-red-500' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all text-sm`}
                       placeholder="Your Name" />
                     {errors.name && <p className="text-xs text-red-500 font-medium mt-1">{errors.name.message}</p>}
                   </div>
 
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-bold text-brown/70 uppercase tracking-wide">
+                  <div className="space-y-1.5">
+                    <label htmlFor="phone" className="text-xs font-bold text-brown/70 uppercase tracking-wide">
                       Phone Number <span className="text-teal">*</span>
                     </label>
                     <input
                       {...register('phoneNumber')}
                       type="tel"
                       id="phone"
-                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.phoneNumber ? 'border-red-500' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all`}
+                      className={`w-full px-3 py-2 rounded-lg bg-white border ${errors.phoneNumber ? 'border-red-500' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all text-sm`}
                       placeholder="Your Phone Number" />
                     {errors.phoneNumber && <p className="text-xs text-red-500 font-medium mt-1">{errors.phoneNumber.message}</p>}
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-bold text-brown/70 uppercase tracking-wide">
+                <div className="space-y-1.5">
+                  <label htmlFor="email" className="text-xs font-bold text-brown/70 uppercase tracking-wide">
                     Email Address <span className="text-teal">*</span>
                   </label>
                   <input
                     {...register('email')}
                     type="email"
                     id="email"
-                    className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.email ? 'border-red-500' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all`}
+                    className={`w-full px-3 py-2 rounded-lg bg-white border ${errors.email ? 'border-red-500' : 'border-brown/10'} focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all text-sm`}
                     placeholder="Your Email Address" />
                   {errors.email && <p className="text-xs text-red-500 font-medium mt-1">{errors.email.message}</p>}
                 </div>
 
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-bold text-brown/70 uppercase tracking-wide">
+                <div className="space-y-1.5">
+                  <label htmlFor="message" className="text-xs font-bold text-brown/70 uppercase tracking-wide">
                     How can we help?
                   </label>
                   <textarea
                     {...register('message')}
                     id="message"
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-brown/10 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all resize-none"
+                    rows={3}
+                    className="w-full px-3 py-2 rounded-lg bg-white border border-brown/10 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none transition-all resize-none text-sm"
                     placeholder="Tell us about your loved one's needs...">
                   </textarea>
                 </div>
 
                 {status === 'error' && (
-                  <div className="flex items-center gap-2 text-red-500 bg-red-500/10 p-4 rounded-xl">
-                    <AlertCircle size={20} />
-                    <p className="text-sm font-medium">{errorMessage}</p>
+                  <div className="flex items-center gap-2 text-red-500 bg-red-500/10 p-3 rounded-lg">
+                    <AlertCircle size={16} />
+                    <p className="text-xs font-medium">{errorMessage}</p>
                   </div>
                 )}
 
                 <Button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="w-full bg-burgundy hover:bg-burgundy-dark flex items-center justify-center gap-2"
-                  size="lg">
+                  className="w-full bg-burgundy hover:bg-burgundy-dark flex items-center justify-center gap-2 py-2.5 text-sm"
+                  size="sm">
                   {status === 'loading' ? (
                     <>
-                      <Loader2 className="animate-spin" size={20} />
+                      <Loader2 className="animate-spin" size={16} />
                       Sending...
                     </>
                   ) : (
@@ -246,6 +246,6 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

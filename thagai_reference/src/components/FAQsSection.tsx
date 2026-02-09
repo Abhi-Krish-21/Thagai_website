@@ -53,21 +53,21 @@ function FAQItem({ question, answer, isOpen, onClick }: {
     >
       <button
         onClick={onClick}
-        className="w-full px-6 py-5 flex items-center justify-between text-left group"
+        className="w-full px-5 py-4 flex items-center justify-between text-left group"
       >
-        <div className="flex items-center gap-4">
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-burgundy text-white shadow-md' : 'bg-burgundy/5 text-burgundy'
+        <div className="flex items-center gap-3">
+          <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-burgundy text-white shadow-md' : 'bg-burgundy/5 text-burgundy'
             }`}>
-            <HelpCircle size={20} strokeWidth={2.5} />
+            <HelpCircle size={18} strokeWidth={2.5} />
           </div>
-          <span className={`font-serif text-lg font-bold transition-colors duration-300 ${isOpen ? 'text-burgundy' : 'text-brown group-hover:text-burgundy'
+          <span className={`font-serif text-base font-bold transition-colors duration-300 ${isOpen ? 'text-burgundy' : 'text-brown group-hover:text-burgundy'
             }`}>
             {question}
           </span>
         </div>
         <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-burgundy/10 text-burgundy rotate-180' : 'text-brown/40'
           }`}>
-          <ChevronDown size={20} />
+          <ChevronDown size={18} />
         </div>
       </button>
       <AnimatePresence>
@@ -78,8 +78,8 @@ function FAQItem({ question, answer, isOpen, onClick }: {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="px-6 pb-6 pt-0 pl-[4.5rem]">
-              <p className="text-brown/80 leading-relaxed font-sans">
+            <div className="px-5 pb-5 pt-0 pl-[3.25rem]">
+              <p className="text-sm text-brown/80 leading-relaxed font-sans">
                 {answer}
               </p>
             </div>
@@ -91,7 +91,7 @@ function FAQItem({ question, answer, isOpen, onClick }: {
 }
 
 export function FAQsSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section className="pt-12 pb-24 bg-cream relative overflow-hidden" id="faqs">
@@ -104,12 +104,12 @@ export function FAQsSection() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
 
           {/* Left Column Content */}
-          <div className="lg:col-span-5 space-y-8 pt-1.5">
+          <div className="lg:col-span-5 space-y-6 pt-1.5">
             <div>
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-5xl font-bold text-brown mb-6 leading-tight">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-brown mb-4 leading-tight">
                 Answers to your <br /> <span className="text-burgundy italic">Questions</span>
               </h2>
-              <p className="text-lg text-brown/70 leading-relaxed max-w-md">
+              <p className="text-base text-brown/70 leading-relaxed max-w-md">
                 We know navigating care options can be overwhelming. Here are clear answers to the most common questions families ask us.
               </p>
             </div>
