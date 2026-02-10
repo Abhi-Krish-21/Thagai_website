@@ -44,7 +44,7 @@ export function AudienceSections() {
                 <img
                   src="/assets/images/for_seniors.png"
                   alt="Senior independence"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover object-right transition-transform duration-700 group-hover:scale-110"
                 />
 
                 {/* Color Shade Layer */}
