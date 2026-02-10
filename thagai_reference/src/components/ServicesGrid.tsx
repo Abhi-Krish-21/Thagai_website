@@ -20,7 +20,7 @@ const services = [
     title: 'Mobility Support',
     description: 'Assistance with transportation and movement to help seniors maintain their independence and mobility.',
     color: 'bg-burgundy/5 text-burgundy',
-    image: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/images/mobility support.png'
   },
   {
     id: 'soulful-journeys',
@@ -28,7 +28,7 @@ const services = [
     title: 'Soulful Journeys',
     description: 'Meaningful travel experiences and spiritual journeys tailored to enrich the lives of our seniors.',
     color: 'bg-teal/5 text-teal',
-    image: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/images/soulful_journeys.png'
   },
   {
     id: 'elder-social-circles',
@@ -36,7 +36,7 @@ const services = [
     title: 'Elder Social Circles',
     description: 'Creating vibrant communities and social connections to combat loneliness and foster friendships.',
     color: 'bg-gold/5 text-gold',
-    image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/images/social_circles.png'
   },
   {
     id: 'home-cooked-meals',
@@ -44,7 +44,7 @@ const services = [
     title: 'Home-Cooked Meals',
     description: 'Nutritious, delicious home-style meals prepared with love and delivered fresh to your door.',
     color: 'bg-gold/5 text-gold',
-    image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/images/home_cooked_meals.png'
   },
   {
     id: 'maid-cooking',
@@ -52,7 +52,7 @@ const services = [
     title: 'Maid & Cooking Services',
     description: 'Professional housekeeping and cooking services to maintain a clean, comfortable living environment.',
     color: 'bg-burgundy/5 text-burgundy',
-    image: '/assets/senior_citizens_cook.png'
+    image: '/assets/images/senior_citizens_cook.png'
   },
   {
     id: 'medicine-grocery',
@@ -60,7 +60,7 @@ const services = [
     title: 'Medicine & Grocery Delivery',
     description: 'Convenient delivery of medications and groceries directly to your home, ensuring you never run out of essentials.',
     color: 'bg-teal/5 text-teal',
-    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/images/grocery_delivery.png'
   },
   {
     id: 'hospital-assistance',
@@ -76,7 +76,7 @@ const services = [
     title: 'Anything You Ask For',
     description: 'Flexible, personalized services to meet any specific needs or requests - we\'re here to help with whatever you need.',
     color: 'bg-gold/5 text-gold',
-    image: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/images/anything_you_ask for.png'
   }
 ];
 
@@ -174,7 +174,7 @@ export function ServicesGrid() {
                   : 'border-brown/5 hover:scale-[1.02]'
                   }`}
               >
-                <div className="relative h-40 overflow-hidden">
+                <div className="relative h-56 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}

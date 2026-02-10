@@ -97,9 +97,9 @@ export function HeroSection() {
             className="relative hidden lg:block h-[600px]">
 
             {/* Main Center Image */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 rounded-[3rem] overflow-hidden shadow-2xl z-20 border-4 border-white">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[26rem] rounded-[3rem] overflow-hidden shadow-2xl z-20 border-4 border-white">
               <img
-                src="/assets/senior_citizens_photo.png"
+                src="/assets/images/senior_citizens_photo.png"
                 alt="Senior citizens at Thagai"
                 className="w-full h-full object-cover" />
 
