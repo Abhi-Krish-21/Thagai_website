@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:web\" \"npm run dev:api\"",
     "dev:web": "npx vite",
-    "dev:api": "npx tsx --watch dev-server.js",
+    "dev:api": "npx tsx dev-server.js",
     "build": "npx vite build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "preview": "npx vite preview"
