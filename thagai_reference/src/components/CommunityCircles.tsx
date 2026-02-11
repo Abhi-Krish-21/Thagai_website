@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function CommunityCircles() {
   return (
-    <section id="community" className="py-24 bg-cream-accent overflow-hidden relative">
+    <section id="community" className="py-16 md:py-24 bg-cream-accent overflow-hidden relative">
       {/* Top Curved Arch Transition (from Cream) */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-10">
         <svg
@@ -79,7 +79,7 @@ export function CommunityCircles() {
               damping: 20
             }}
             whileHover={{ y: -12 }}
-            className="bg-burgundy/[0.02] hover:bg-burgundy p-6 rounded-[2.5rem] border-2 border-burgundy/15 hover:border-cream/20 shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
+            className="bg-burgundy/[0.02] hover:bg-burgundy p-6 rounded-[2rem] md:rounded-[2.5rem] border-2 border-burgundy/15 hover:border-cream/20 shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
             <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-cream/10 transition-colors duration-500"></div>
             <h3 className="font-serif text-xl md:text-2xl font-bold text-brown group-hover:text-cream mb-3 transition-colors duration-300">
               Make friends, stay active, get help
@@ -119,7 +119,7 @@ export function CommunityCircles() {
               damping: 20
             }}
             whileHover={{ y: -12 }}
-            className="bg-burgundy/[0.02] hover:bg-burgundy p-6 rounded-[2.5rem] border-2 border-burgundy/15 hover:border-cream/20 shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
+            className="bg-burgundy/[0.02] hover:bg-burgundy p-6 rounded-[2rem] md:rounded-[2.5rem] border-2 border-burgundy/15 hover:border-cream/20 shadow-sm hover:shadow-2xl hover:shadow-burgundy/10 transition-all duration-300 group relative overflow-hidden cursor-default">
             <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-cream/10 transition-colors duration-500"></div>
             <h3 className="font-serif text-xl md:text-2xl font-bold text-brown group-hover:text-cream mb-3 transition-colors duration-300">
               Care for your parents, even from miles away

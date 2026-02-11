@@ -32,15 +32,24 @@ export function AudienceSections() {
         </div>
 
         <div className="relative mt-8">
-          <div className="grid md:grid-cols-3 gap-8 items-center">
+          <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 items-center overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 md:pb-0 px-4 md:px-0 -mx-4 md:mx-0 scrollbar-hide">
+            <style>{`
+              .scrollbar-hide::-webkit-scrollbar {
+                  display: none;
+              }
+              .scrollbar-hide {
+                  -ms-overflow-style: none;
+                  scrollbar-width: none;
+              }
+            `}</style>
 
             {/* Seniors Card (Left) */}
             <div
-              className={`relative group cursor-pointer transition-all duration-700 ${activeSection === 'seniors' ? 'z-30 scale-105' : 'z-10 scale-100'}`}
+              className={`relative min-w-[85vw] md:min-w-0 snap-center group cursor-pointer transition-all duration-700 ${activeSection === 'seniors' ? 'z-30 scale-105' : 'z-10 scale-100'}`}
               onMouseEnter={() => setActiveSection('seniors')}
               onMouseLeave={() => setActiveSection(null)}
             >
-              <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-brown/5">
+              <div className="relative h-[450px] md:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-brown/5">
                 <img
                   src="/assets/images/for_seniors.png"
                   alt="Senior independence"
@@ -62,7 +71,7 @@ export function AudienceSections() {
 
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
 
-                  <h2 className="text-3xl font-serif font-bold text-white mb-4">
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
                     Your <span className="text-teal-300">Independence</span>,
                     <br />Our Priority
                   </h2>
@@ -90,7 +99,7 @@ export function AudienceSections() {
             </div>
 
             {/* Middle Overlapping Card */}
-            <div className="relative z-20 my-8 md:my-0">
+            <div className="relative z-20 min-w-[85vw] md:min-w-0 snap-center">
               <div className="bg-white rounded-[2.5rem] shadow-2xl p-8 lg:p-12 text-center transform md:scale-105 border border-brown/5 relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-gold via-burgundy to-teal opacity-60"></div>
 
@@ -125,11 +134,11 @@ export function AudienceSections() {
 
             {/* Families Card (Right) */}
             <div
-              className={`relative group cursor-pointer transition-all duration-700 ${activeSection === 'families' ? 'z-30 scale-105' : 'z-10 scale-100'}`}
+              className={`relative min-w-[85vw] md:min-w-0 snap-center group cursor-pointer transition-all duration-700 ${activeSection === 'families' ? 'z-30 scale-105' : 'z-10 scale-100'}`}
               onMouseEnter={() => setActiveSection('families')}
               onMouseLeave={() => setActiveSection(null)}
             >
-              <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-brown/5">
+              <div className="relative h-[450px] md:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-brown/5">
                 <img
                   src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=800&auto=format&fit=crop"
                   alt="Family peace of mind"
@@ -151,7 +160,7 @@ export function AudienceSections() {
 
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
 
-                  <h2 className="text-3xl font-serif font-bold text-white mb-4">
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
                     Complete <span className="text-coral font-extrabold">Peace</span>
                     <br />of Mind
                   </h2>

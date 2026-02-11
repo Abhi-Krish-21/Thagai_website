@@ -81,7 +81,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center py-24 bg-burgundy text-white relative overflow-hidden">
+      className="min-h-[auto] md:min-h-screen flex items-center py-12 md:py-24 bg-burgundy text-white relative overflow-hidden">
 
       {/* Rich Background Pattern */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -111,12 +111,12 @@ export function ContactSection() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream">
+            <h2 className="font-serif text-2xl md:text-4xl font-bold text-cream">
               Let's Start a Conversation
             </h2>
-            <p className="text-lg text-cream/90 leading-relaxed max-w-md">
+            <p className="text-sm md:text-lg text-cream/90 leading-relaxed max-w-md">
               We understand that choosing care is a big decision. We're here to
               listen, answer your questions, and help you find the right path
               for your family—no pressure, just support.
@@ -124,22 +124,22 @@ export function ContactSection() {
 
             <div className="space-y-4 pt-2">
               <div className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-gold transition-colors">
-                  <Phone size={20} />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-gold transition-colors">
+                  <Phone className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <div>
                   <div className="text-xs text-cream/70 uppercase tracking-wider mb-0.5">
                     Call Us Anytime
                   </div>
-                  <div className="text-xl font-serif font-bold">
+                  <div className="text-lg md:text-xl font-serif font-bold">
                     +91 80726 50628
                   </div>
                 </div>
               </div>
 
               <div className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-teal transition-colors">
-                  <Mail size={20} />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-cream group-hover:bg-teal transition-colors">
+                  <Mail className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <div>
                   <div className="text-xs text-cream/70 uppercase tracking-wider mb-0.5">
@@ -151,8 +151,8 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="bg-cream rounded-[2rem] p-6 md:p-8 shadow-2xl text-brown max-w-lg mx-auto w-full">
-            <h3 className="font-serif text-xl font-bold mb-4">
+          <div className="bg-cream rounded-[2rem] p-5 md:p-8 shadow-2xl text-brown max-w-lg mx-auto w-full">
+            <h3 className="font-serif text-lg md:text-xl font-bold mb-4">
               Send Us a Message
             </h3>
 
@@ -252,7 +252,7 @@ export function ContactSection() {
                 </motion.div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 md:space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label htmlFor="name" className="text-xs font-bold text-brown/70 uppercase tracking-wide">
@@ -317,7 +317,7 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="w-full bg-burgundy hover:bg-burgundy-dark flex items-center justify-center gap-2 py-2.5 text-sm"
+                  className="w-full bg-burgundy hover:bg-burgundy-dark flex items-center justify-center gap-2 py-2 md:py-2.5 text-sm"
                   size="sm">
                   {status === 'loading' ? (
                     <>
