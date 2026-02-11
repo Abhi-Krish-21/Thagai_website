@@ -81,13 +81,26 @@ export function HeroSection() {
               and transport to meals and daily support, everything your family needs
               is in one place—hassle-free.
             </p>
-            {/* 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="group">
+
+            <div className="lg:hidden mt-6">
+              <button
+                onClick={() => {
+                  const element = document.getElementById('contact');
+                  if (element) {
+                    const offset = 300;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset + offset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth"
+                    });
+                  }
+                }}
+                className="bg-burgundy text-white px-5 py-2 rounded-full font-bold text-sm shadow-md hover:bg-burgundy-dark transition-colors"
+              >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </div> */}
+              </button>
+            </div>
           </motion.div>
 
           {/* Right Content - Photo Mosaic */}
