@@ -23,6 +23,11 @@ export function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const handleLogoClick = () => {
+    window.scrollTo(0, 0);
+    setIsMobileMenuOpen(false);
+  };
+
   const navLinks = [
     { name: 'Our Services', href: '/#services' },
     { name: 'Community', href: '/#community' },
@@ -35,7 +40,7 @@ export function Navigation() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
 
-        <div className="w-full px-4 md:px-12 lg:px-16">
+        <div className="w-full px-4 md:px-6 lg:px-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               {/* Mobile Menu Button */}
@@ -47,7 +52,11 @@ export function Navigation() {
               </button>
 
               {/* Logo */}
-              <Link to="/" className="flex items-center group hover:opacity-80 transition-opacity">
+              <Link
+                to="/"
+                onClick={handleLogoClick}
+                className="flex items-center group hover:opacity-80 transition-opacity"
+              >
                 <Logo variant="dark" size="md" />
               </Link>
             </div>
@@ -86,11 +95,11 @@ export function Navigation() {
                 variant="primary"
                 size="sm"
                 onClick={handleChatClick}
-                className="flex items-center gap-2 px-3 py-1.5 text-sm">
+                className="flex items-center gap-1.5 px-2.25 py-0.5 text-xs">
                 <svg
                   viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
+                  width="14"
+                  height="14"
                   fill="currentColor"
                   className="text-white"
                 >
@@ -126,8 +135,8 @@ export function Navigation() {
             >
               {/* Menu Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                <div onClick={() => setIsMobileMenuOpen(false)}>
-                  <Link to="/">
+                <div>
+                  <Link to="/" onClick={handleLogoClick}>
                     <Logo variant="dark" size="md" />
                   </Link>
                 </div>
