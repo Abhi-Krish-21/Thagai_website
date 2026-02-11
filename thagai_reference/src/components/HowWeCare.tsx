@@ -47,7 +47,7 @@ const steps = [
 
 export function HowWeCare() {
   return (
-    <section className="py-20 bg-cream relative overflow-hidden">
+    <section className="py-20 bg-cream-accent relative overflow-hidden rounded-b-[4rem]">
       {/* Dynamic Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-burgundy/5 rounded-full blur-[100px] -translate-x-1/2"></div>
@@ -55,7 +55,25 @@ export function HowWeCare() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-gold/5 rounded-full blur-[80px] rotate-12"></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      {/* Top Wave Transition (from Cream) */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-10">
+        <svg
+          className="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[80px]"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            className="fill-cream"
+          ></path>
+        </svg>
+      </div>
+
+
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10 pt-12 md:pt-20">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

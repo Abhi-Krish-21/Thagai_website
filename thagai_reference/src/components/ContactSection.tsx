@@ -8,7 +8,7 @@ import { Phone, Mail, Loader2, AlertCircle } from 'lucide-react';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
+  email: z.string().email("Invalid email address").optional().or(z.literal("")),
   phoneNumber: z.string().min(10, "Phone number must be 10 digits").max(10, "Phone number must be 10 digits"),
   message: z.string().optional(),
 });
@@ -283,7 +283,7 @@ export function ContactSection() {
 
                 <div className="space-y-1.5">
                   <label htmlFor="email" className="text-xs font-bold text-brown/70 uppercase tracking-wide">
-                    Email Address <span className="text-teal">*</span>
+                    Email Address <span className="text-brown/40 lowercase italic font-normal">(Optional)</span>
                   </label>
                   <input
                     {...register('email')}
@@ -325,7 +325,7 @@ export function ContactSection() {
                       Sending...
                     </>
                   ) : (
-                    'Request Free Consultation'
+                    'Enquire Now'
                   )}
                 </Button>
               </form>
