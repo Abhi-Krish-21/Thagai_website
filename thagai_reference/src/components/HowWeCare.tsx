@@ -47,7 +47,7 @@ const steps = [
 
 export function HowWeCare() {
   return (
-    <section className="py-16 md:py-20 bg-cream-accent relative overflow-hidden rounded-b-[4rem]">
+    <section className="pb-16 md:pb-20 bg-cream-accent relative overflow-hidden rounded-b-[4rem]">
       {/* Dynamic Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-burgundy/5 rounded-full blur-[100px] -translate-x-1/2"></div>
@@ -73,7 +73,9 @@ export function HowWeCare() {
 
 
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10 pt-12 md:pt-20">
+
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10 pt-14 md:pt-24">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
