@@ -1,11 +1,21 @@
 import { motion } from 'framer-motion';
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-28 pb-10 overflow-hidden bg-cream">
+    <section className="relative min-h-screen flex items-center pt-20 md:pt-28 pb-10 overflow-hidden bg-cream">
       {/* Bottom gradient transition to next section (burgundy/purple) - taller for smoother fade */}
       <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-b from-transparent via-burgundy/10 to-burgundy pointer-events-none z-10"></div>
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        {/* Mobile-Only Bottom Background Image */}
+        <div className="absolute bottom-0 left-0 w-full h-[65vh] block lg:hidden z-0 opacity-20">
+          <div className="absolute inset-0 bg-gradient-to-b from-cream via-transparent to-transparent z-10"></div>
+          <img
+            src="/assets/images/senior_citizens_photo.png"
+            alt="Background ambiance"
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+
         <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-teal/10 rounded-full blur-[120px] animate-blob"></div>
         <div className="absolute bottom-[-10%] left-[-10%] w-[700px] h-[700px] bg-gold/10 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
         <div className="absolute top-[40%] left-[20%] w-[400px] h-[400px] bg-burgundy/5 rounded-full blur-[100px] animate-blob animation-delay-4000"></div>
@@ -46,7 +56,7 @@ export function HeroSection() {
             }}
             className="space-y-8 max-w-2xl">
 
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-brown leading-[1.1]">
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-brown leading-[1.1]">
               Care Made{' '}
               <span className="relative inline-block">
                 <span className="relative z-10 text-teal">Simple</span>
@@ -94,10 +104,10 @@ export function HeroSection() {
               duration: 1,
               delay: 0.2
             }}
-            className="relative hidden lg:block h-[600px]">
+            className="relative hidden lg:block lg:h-[600px] mt-12 lg:mt-0">
 
-            {/* Main Center Image */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[26rem] rounded-[3rem] overflow-hidden shadow-2xl z-20 border-4 border-white">
+            {/* Main Center Image - Block on Mobile, Absolute on Desktop */}
+            <div className="relative w-full max-w-sm mx-auto h-[24rem] lg:w-80 lg:h-[26rem] lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 rounded-[2.5rem] overflow-hidden shadow-2xl z-20 border-4 border-white">
               <img
                 src="/assets/images/senior_citizens_photo.png"
                 alt="Senior citizens at Thagai"
@@ -115,7 +125,7 @@ export function HeroSection() {
                 repeat: Infinity,
                 ease: 'easeInOut'
               }}
-              className="absolute top-10 right-10 w-48 h-48 rounded-full overflow-hidden shadow-xl z-10 border-4 border-white">
+              className="absolute top-10 right-10 w-48 h-48 rounded-full overflow-hidden shadow-xl z-10 border-4 border-white hidden lg:block">
 
               <img
                 src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop"
@@ -135,7 +145,7 @@ export function HeroSection() {
                 ease: 'easeInOut',
                 delay: 1
               }}
-              className="absolute bottom-10 left-0 w-56 h-40 rounded-[2rem] overflow-hidden shadow-xl z-30 border-4 border-white">
+              className="absolute bottom-10 left-0 w-56 h-40 rounded-[2rem] overflow-hidden shadow-xl z-30 border-4 border-white hidden lg:block">
 
               <img
                 src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=400&auto=format&fit=crop"

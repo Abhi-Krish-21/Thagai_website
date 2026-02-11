@@ -136,14 +136,14 @@ export function ServicesGrid() {
           <div className="flex gap-4">
             <button
               onClick={() => scroll('left')}
-              className="w-12 h-12 rounded-full border border-brown/20 flex items-center justify-center text-brown hover:bg-burgundy hover:text-white transition-all duration-300"
+              className="hidden md:flex w-12 h-12 rounded-full border border-brown/20 items-center justify-center text-brown hover:bg-burgundy hover:text-white transition-all duration-300"
               aria-label="Previous"
             >
               <ChevronLeft size={24} />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="w-12 h-12 rounded-full border border-brown/20 flex items-center justify-center text-brown hover:bg-burgundy hover:text-white transition-all duration-300"
+              className="hidden md:flex w-12 h-12 rounded-full border border-brown/20 items-center justify-center text-brown hover:bg-burgundy hover:text-white transition-all duration-300"
               aria-label="Next"
             >
               <ChevronRight size={24} />
@@ -154,7 +154,7 @@ export function ServicesGrid() {
         <div
           ref={containerRef}
           onScroll={handleScroll}
-          className="flex gap-6 overflow-x-auto pb-12 snap-x snap-mandatory no-scrollbar cursor-grab active:cursor-grabbing scrollbar-hide"
+          className="flex gap-4 md:gap-6 overflow-x-auto pb-12 snap-x snap-mandatory no-scrollbar cursor-grab active:cursor-grabbing scrollbar-hide"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {services.map((service, index) => (
