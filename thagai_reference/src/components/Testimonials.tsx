@@ -5,38 +5,26 @@ import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 const testimonials = [
   {
     quote:
-      'The warmth and genuine care the team showed my father was beyond anything we expected. He felt truly loved.',
-    author: 'Sarah Jenkins',
-    relation: 'Daughter',
-    image:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop',
+      "I stay in Dubai and managing things for my parents in Chennai was becoming difficult. Thagai became like one single contact for everything. Small small things also they took care. That peace of mind is different.",
+    author: 'Joshua',
     color: '#47294C' // Burgundy
   },
   {
     quote:
-      "Finding Thagai was a blessing. The caregivers aren't just staff; they've become part of our extended family.",
-    author: 'Michael Chen',
-    relation: 'Son',
-    image:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop',
+      "Booked assistance for my dad through Thagai. I was honestly stressed because I couldn’t take leave from work. The coordinator handled everything properly and kept updating me. Felt relieved for the first time in months.",
+    author: 'S.Charulatha',
     color: '#2D8B8B' // Teal
   },
   {
     quote:
-      "I was worried about losing my independence, but they help me do the things I love safely. I'm happier than I've been in years.",
-    author: 'Eleanor Rigby',
-    relation: 'Client',
-    image:
-      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=200&auto=format&fit=crop',
+      "Father-in-law had surgery and we were confused about home nursing, but the nurse was warm and actually cared for him like family. Made things less stressful for all of us.",
+    author: 'R.K.Kumaar',
     color: '#E07B54' // Coral
   },
   {
     quote:
-      "Thagai's team provided exceptional support during my recovery. Their attention to detail and compassion were unmatched.",
-    author: 'David Wilson',
-    relation: 'Client',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
+      "Between meetings and deadlines I had no idea how mom was doing. Thagai kept me updated and made me feel like someone is watching over her so grateful for that.",
+    author: 'Anonymous user',
     color: '#D4A853' // Gold
   }
 ];
@@ -158,36 +146,34 @@ export function Testimonials() {
 
                     {/* Quote Icon */}
                     <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-lg mb-4"
+                      className="w-8 h-8 rounded-lg flex items-center justify-center text-white shadow-lg mb-3"
                       style={{ backgroundColor: item.color }}
                     >
-                      <Quote size={20} fill="currentColor" strokeWidth={0} />
+                      <Quote size={16} fill="currentColor" strokeWidth={0} />
                     </div>
 
-                    <div className="mb-6 flex-grow">
-                      <p className="font-serif italic text-base md:text-lg text-brown/90 leading-relaxed">
+                    <div className="mb-4 flex-grow overflow-y-auto custom-scrollbar">
+                      <p className="font-serif italic text-sm md:text-base text-brown/90 leading-relaxed">
                         "{item.quote}"
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-4 pt-6 border-t border-brown/5">
+                    <div className="flex items-center gap-4 pt-4 border-t border-brown/5">
                       <div className="relative">
-                        <img
-                          src={item.image}
-                          alt={item.author}
-                          className="w-12 h-12 md:w-14 md:h-14 rounded-xl object-cover border-2 border-white shadow-lg"
-                        />
                         <div
-                          className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-white shadow-sm"
+                          className="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg border-2 border-white"
+                          style={{ backgroundColor: item.color }}
+                        >
+                          {item.author.charAt(0).toUpperCase()}
+                        </div>
+                        <div
+                          className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full border-2 border-white shadow-sm"
                           style={{ backgroundColor: item.color }}
                         ></div>
                       </div>
                       <div>
-                        <div className="font-bold text-brown text-base md:text-lg">
+                        <div className="font-bold text-brown text-sm md:text-base">
                           {item.author}
-                        </div>
-                        <div className="text-xs text-brown/50 font-medium uppercase tracking-widest mt-0.5">
-                          {item.relation}
                         </div>
                       </div>
                     </div>

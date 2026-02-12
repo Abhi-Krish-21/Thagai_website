@@ -40,7 +40,7 @@ export function Navigation() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
 
-        <div className="w-full px-4 md:px-6 lg:px-4">
+        <div className="w-full pl-1 md:pl-2 lg:pl-1 pr-4 md:pr-6 lg:pr-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               {/* Mobile Menu Button */}
@@ -55,7 +55,7 @@ export function Navigation() {
               <Link
                 to="/"
                 onClick={handleLogoClick}
-                className="flex items-center group hover:opacity-80 transition-opacity"
+                className="flex items-center group hover:opacity-80 transition-opacity md:-ml-6"
               >
                 <Logo variant="dark" size="md" />
               </Link>
