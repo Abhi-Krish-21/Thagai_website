@@ -25,8 +25,7 @@ const testimonials = [
     quote:
       "Between meetings and deadlines I had no idea how mom was doing. Thagai kept me updated and made me feel like someone is watching over her so grateful for that.",
     author: 'A.Babu',
-    color: '#D4A853', // Gold
-    image: '/assets/images/review_ababu.jpeg'
+    color: '#D4A853' // Gold
   }
 ];
 
@@ -161,20 +160,12 @@ export function Testimonials() {
 
                     <div className="flex items-center gap-4 pt-4 border-t border-brown/5">
                       <div className="relative">
-                        {item.image ? (
-                          <img
-                            src={item.image}
-                            alt={item.author}
-                            className="w-10 h-10 md:w-12 md:h-12 rounded-xl object-cover shadow-lg border-2 border-white"
-                          />
-                        ) : (
-                          <div
-                            className="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg border-2 border-white"
-                            style={{ backgroundColor: item.color }}
-                          >
-                            {item.author.charAt(0).toUpperCase()}
-                          </div>
-                        )}
+                        <div
+                          className="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg border-2 border-white"
+                          style={{ backgroundColor: item.color }}
+                        >
+                          {item.author.charAt(0).toUpperCase()}
+                        </div>
                         <div
                           className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full border-2 border-white shadow-sm"
                           style={{ backgroundColor: item.color }}

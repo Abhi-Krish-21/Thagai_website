@@ -133,9 +133,9 @@ export function FAQsSection() {
             {/* Image Card - Adjusted height to align with FAQ end */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 block mb-8 lg:mb-0">
               <img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop"
+                src="/assets/images/faq.png"
                 alt="Friendly support"
-                className="w-full h-64 md:h-[310px] object-cover"
+                className="w-full h-64 md:h-[310px] object-cover object-[45%_center]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-8">
                 <div className="text-white font-serif text-2xl mb-1">"We are here to help."</div>
