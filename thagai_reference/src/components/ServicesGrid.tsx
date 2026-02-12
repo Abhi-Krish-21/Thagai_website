@@ -68,7 +68,7 @@ const services = [
     title: 'Hospital Assistance',
     description: 'Comprehensive support during hospital visits and medical appointments with caring companions.',
     color: 'bg-burgundy/5 text-burgundy',
-    image: 'https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=400&auto=format&fit=crop'
+    image: '/assets/images/hospital assisstance.png'
   },
   {
     id: 'anything-you-ask',

@@ -24,7 +24,7 @@ const testimonials = [
   {
     quote:
       "Between meetings and deadlines I had no idea how mom was doing. Thagai kept me updated and made me feel like someone is watching over her so grateful for that.",
-    author: 'Anonymous user',
+    author: 'A.Babu',
     color: '#D4A853' // Gold
   }
 ];
