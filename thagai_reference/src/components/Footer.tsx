@@ -120,7 +120,7 @@ export function Footer() {
           <div className="flex-1 text-left hidden md:block">
             &copy; 2025 Thagai · All rights reserved.
           </div>
-          <div className="flex gap-8 justify-center flex-1">
+          <div className="flex gap-8 justify-end flex-1">
             <a
               href="/privacy"
               target="_blank"
@@ -138,14 +138,11 @@ export function Footer() {
               Terms of Service
             </a>
           </div>
-          <div className="flex-1 text-right hidden md:block">
-            Developed by Initio
-          </div>
 
           {/* Mobile version to keep order clean */}
           <div className="md:hidden flex flex-col items-center gap-2">
             <p>&copy; 2025 Thagai · All rights reserved.</p>
-            <p>Developed by Initio</p>
+            <p></p>
           </div>
         </div>
       </div>

@@ -138,7 +138,7 @@ export function HeroSection() {
                 repeat: Infinity,
                 ease: 'easeInOut'
               }}
-              className="absolute top-10 right-10 w-48 h-48 rounded-full overflow-hidden shadow-xl z-10 border-4 border-white hidden lg:block">
+              className="absolute top-10 right-10 w-48 h-48 rounded-full overflow-hidden shadow-xl z-30 border-4 border-white hidden lg:block">
 
               <img
                 src="/assets/images/thagai_image_hero_3.png"
